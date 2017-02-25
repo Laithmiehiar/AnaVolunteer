@@ -9,12 +9,24 @@
 /* Begin PBXBuildFile section */
 		0E06FB9F0AA55C04A06C5EF3 /* Pods_AnaVolunteer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49C773795270A4C4C0C197E5 /* Pods_AnaVolunteer.framework */; };
 		AC266AA01E60FA340009B6E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC266A9F1E60FA340009B6E3 /* AppDelegate.swift */; };
-		AC266AA21E60FA340009B6E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC266AA11E60FA340009B6E3 /* ViewController.swift */; };
+		AC266AA21E60FA340009B6E3 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC266AA11E60FA340009B6E3 /* LoginVC.swift */; };
 		AC266AA51E60FA340009B6E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC266AA31E60FA340009B6E3 /* Main.storyboard */; };
 		AC266AA81E60FA340009B6E3 /* AnaVolunteer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC266AA61E60FA340009B6E3 /* AnaVolunteer.xcdatamodeld */; };
 		AC266AAA1E60FA340009B6E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC266AA91E60FA340009B6E3 /* Assets.xcassets */; };
 		AC266AAD1E60FA340009B6E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC266AAB1E60FA340009B6E3 /* LaunchScreen.storyboard */; };
 		AC266AB51E61015B0009B6E3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC266AB41E61015B0009B6E3 /* GoogleService-Info.plist */; };
+		AC266ABC1E6131830009B6E3 /* Always Forever Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC266ABA1E6131830009B6E3 /* Always Forever Bold.ttf */; };
+		AC266ABD1E6131830009B6E3 /* Always Forever.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC266ABB1E6131830009B6E3 /* Always Forever.ttf */; };
+		AC266ABF1E61318A0009B6E3 /* JennaSue.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC266ABE1E61318A0009B6E3 /* JennaSue.ttf */; };
+		AC266AC11E6131950009B6E3 /* angelina.TTF in Resources */ = {isa = PBXBuildFile; fileRef = AC266AC01E6131950009B6E3 /* angelina.TTF */; };
+		AC266AC41E6133E30009B6E3 /* Haiku's Script version 09 Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC266AC21E6133E30009B6E3 /* Haiku's Script version 09 Bold.ttf */; };
+		AC266AC51E6133E30009B6E3 /* Haiku's Script version 09 Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC266AC31E6133E30009B6E3 /* Haiku's Script version 09 Regular.ttf */; };
+		AC266AC81E6152F60009B6E3 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC266AC71E6152F60009B6E3 /* Constant.swift */; };
+		AC266ACA1E6153920009B6E3 /* FancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC266AC91E6153920009B6E3 /* FancyView.swift */; };
+		AC266ACC1E6155670009B6E3 /* FancyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC266ACB1E6155670009B6E3 /* FancyButton.swift */; };
+		AC266ACE1E61FDAC0009B6E3 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC266ACD1E61FDAC0009B6E3 /* CustomTextField.swift */; };
+		AC266AD01E6203F60009B6E3 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC266ACF1E6203F60009B6E3 /* SignupVC.swift */; };
+		AC266AD21E6225120009B6E3 /* CustomeTextFieldWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC266AD11E6225120009B6E3 /* CustomeTextFieldWithIcon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,13 +35,25 @@
 		49C773795270A4C4C0C197E5 /* Pods_AnaVolunteer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnaVolunteer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC266A9C1E60FA340009B6E3 /* AnaVolunteer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnaVolunteer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC266A9F1E60FA340009B6E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AC266AA11E60FA340009B6E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AC266AA11E60FA340009B6E3 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		AC266AA41E60FA340009B6E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC266AA71E60FA340009B6E3 /* AnaVolunteer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AnaVolunteer.xcdatamodel; sourceTree = "<group>"; };
 		AC266AA91E60FA340009B6E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC266AAC1E60FA340009B6E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC266AAE1E60FA340009B6E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC266AB41E61015B0009B6E3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AC266ABA1E6131830009B6E3 /* Always Forever Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Always Forever Bold.ttf"; sourceTree = "<group>"; };
+		AC266ABB1E6131830009B6E3 /* Always Forever.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Always Forever.ttf"; sourceTree = "<group>"; };
+		AC266ABE1E61318A0009B6E3 /* JennaSue.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = JennaSue.ttf; sourceTree = "<group>"; };
+		AC266AC01E6131950009B6E3 /* angelina.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = angelina.TTF; sourceTree = "<group>"; };
+		AC266AC21E6133E30009B6E3 /* Haiku's Script version 09 Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Haiku's Script version 09 Bold.ttf"; sourceTree = "<group>"; };
+		AC266AC31E6133E30009B6E3 /* Haiku's Script version 09 Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Haiku's Script version 09 Regular.ttf"; sourceTree = "<group>"; };
+		AC266AC71E6152F60009B6E3 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		AC266AC91E6153920009B6E3 /* FancyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyView.swift; sourceTree = "<group>"; };
+		AC266ACB1E6155670009B6E3 /* FancyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyButton.swift; sourceTree = "<group>"; };
+		AC266ACD1E61FDAC0009B6E3 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		AC266ACF1E6203F60009B6E3 /* SignupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 5; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
+		AC266AD11E6225120009B6E3 /* CustomeTextFieldWithIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomeTextFieldWithIcon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,13 +106,15 @@
 		AC266A9E1E60FA340009B6E3 /* AnaVolunteer */ = {
 			isa = PBXGroup;
 			children = (
+				AC266AC61E6152D30009B6E3 /* Util */,
+				AC266AB91E6131630009B6E3 /* Res */,
 				AC266AB81E61103E0009B6E3 /* View */,
 				AC266AB61E6110310009B6E3 /* Model */,
 				AC266A9F1E60FA340009B6E3 /* AppDelegate.swift */,
 				AC266AB71E6110360009B6E3 /* Controller */,
 				AC266AA31E60FA340009B6E3 /* Main.storyboard */,
-				AC266AA91E60FA340009B6E3 /* Assets.xcassets */,
 				AC266AAB1E60FA340009B6E3 /* LaunchScreen.storyboard */,
+				AC266AA91E60FA340009B6E3 /* Assets.xcassets */,
 				AC266AAE1E60FA340009B6E3 /* Info.plist */,
 				AC266AA61E60FA340009B6E3 /* AnaVolunteer.xcdatamodeld */,
 				AC266AB41E61015B0009B6E3 /* GoogleService-Info.plist */,
@@ -106,7 +132,8 @@
 		AC266AB71E6110360009B6E3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				AC266AA11E60FA340009B6E3 /* ViewController.swift */,
+				AC266AA11E60FA340009B6E3 /* LoginVC.swift */,
+				AC266ACF1E6203F60009B6E3 /* SignupVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -114,8 +141,33 @@
 		AC266AB81E61103E0009B6E3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AC266ACD1E61FDAC0009B6E3 /* CustomTextField.swift */,
+				AC266AC91E6153920009B6E3 /* FancyView.swift */,
+				AC266ACB1E6155670009B6E3 /* FancyButton.swift */,
+				AC266AD11E6225120009B6E3 /* CustomeTextFieldWithIcon.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		AC266AB91E6131630009B6E3 /* Res */ = {
+			isa = PBXGroup;
+			children = (
+				AC266ABA1E6131830009B6E3 /* Always Forever Bold.ttf */,
+				AC266ABB1E6131830009B6E3 /* Always Forever.ttf */,
+				AC266ABE1E61318A0009B6E3 /* JennaSue.ttf */,
+				AC266AC01E6131950009B6E3 /* angelina.TTF */,
+				AC266AC21E6133E30009B6E3 /* Haiku's Script version 09 Bold.ttf */,
+				AC266AC31E6133E30009B6E3 /* Haiku's Script version 09 Regular.ttf */,
+			);
+			name = Res;
+			sourceTree = "<group>";
+		};
+		AC266AC61E6152D30009B6E3 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				AC266AC71E6152F60009B6E3 /* Constant.swift */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,10 +232,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC266ABC1E6131830009B6E3 /* Always Forever Bold.ttf in Resources */,
 				AC266AAD1E60FA340009B6E3 /* LaunchScreen.storyboard in Resources */,
 				AC266AB51E61015B0009B6E3 /* GoogleService-Info.plist in Resources */,
 				AC266AAA1E60FA340009B6E3 /* Assets.xcassets in Resources */,
+				AC266ABD1E6131830009B6E3 /* Always Forever.ttf in Resources */,
+				AC266AC51E6133E30009B6E3 /* Haiku's Script version 09 Regular.ttf in Resources */,
+				AC266ABF1E61318A0009B6E3 /* JennaSue.ttf in Resources */,
 				AC266AA51E60FA340009B6E3 /* Main.storyboard in Resources */,
+				AC266AC41E6133E30009B6E3 /* Haiku's Script version 09 Bold.ttf in Resources */,
+				AC266AC11E6131950009B6E3 /* angelina.TTF in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,9 +300,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC266AA21E60FA340009B6E3 /* ViewController.swift in Sources */,
+				AC266AD01E6203F60009B6E3 /* SignupVC.swift in Sources */,
+				AC266ACE1E61FDAC0009B6E3 /* CustomTextField.swift in Sources */,
+				AC266AD21E6225120009B6E3 /* CustomeTextFieldWithIcon.swift in Sources */,
+				AC266ACC1E6155670009B6E3 /* FancyButton.swift in Sources */,
+				AC266AA21E60FA340009B6E3 /* LoginVC.swift in Sources */,
+				AC266ACA1E6153920009B6E3 /* FancyView.swift in Sources */,
 				AC266AA01E60FA340009B6E3 /* AppDelegate.swift in Sources */,
 				AC266AA81E60FA340009B6E3 /* AnaVolunteer.xcdatamodeld in Sources */,
+				AC266AC81E6152F60009B6E3 /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
