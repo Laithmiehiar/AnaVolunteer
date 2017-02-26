@@ -27,6 +27,7 @@
 		AC266ACE1E61FDAC0009B6E3 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC266ACD1E61FDAC0009B6E3 /* CustomTextField.swift */; };
 		AC266AD01E6203F60009B6E3 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC266ACF1E6203F60009B6E3 /* SignupVC.swift */; };
 		AC266AD21E6225120009B6E3 /* CustomeTextFieldWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC266AD11E6225120009B6E3 /* CustomeTextFieldWithIcon.swift */; };
+		AC266AD51E6266CE0009B6E3 /* HomePageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC266AD41E6266CE0009B6E3 /* HomePageVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		AC266ACF1E6203F60009B6E3 /* SignupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 5; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		AC266AD11E6225120009B6E3 /* CustomeTextFieldWithIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomeTextFieldWithIcon.swift; sourceTree = "<group>"; };
 		AC266AD31E6244A40009B6E3 /* AnaVolunteer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AnaVolunteer.entitlements; sourceTree = "<group>"; };
+		AC266AD41E6266CE0009B6E3 /* HomePageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 			children = (
 				AC266AA11E60FA340009B6E3 /* LoginVC.swift */,
 				AC266ACF1E6203F60009B6E3 /* SignupVC.swift */,
+				AC266AD41E6266CE0009B6E3 /* HomePageVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC266AD51E6266CE0009B6E3 /* HomePageVC.swift in Sources */,
 				AC266AD01E6203F60009B6E3 /* SignupVC.swift in Sources */,
 				AC266ACE1E61FDAC0009B6E3 /* CustomTextField.swift in Sources */,
 				AC266AD21E6225120009B6E3 /* CustomeTextFieldWithIcon.swift in Sources */,

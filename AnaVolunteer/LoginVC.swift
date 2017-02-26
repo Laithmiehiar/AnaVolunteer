@@ -9,15 +9,19 @@
 import UIKit
 import FBSDKLoginKit
 import Firebase
+import SwiftKeychainWrapper
+
 class LoginVC: UIViewController {
     
     @IBOutlet weak var emailField: CustomeTextFieldWithIcon!
     @IBOutlet weak var passwordField: CustomeTextFieldWithIcon!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
     }
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         //set email-text field icon
@@ -34,6 +38,17 @@ class LoginVC: UIViewController {
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
         
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if let _ = KeychainWrapper.standard.string(forKey: KEY_ID){
+            print("LoginVC: ID found in keychain")
+            performSegue(withIdentifier: "goToHomePage", sender: nil)
+        }
+        
+    }
+    
     func setLeftIcontoTextField(iconName : String , textFieldName:CustomeTextFieldWithIcon){
         let imageview = UIImageView(frame: CGRect(x:15, y: 6, width: 20, height: 20))
         let image = UIImage(named: iconName)
@@ -42,6 +57,8 @@ class LoginVC: UIViewController {
         //email.leftView = imageview
         textFieldName.addSubview(imageview)
     }
+    
+    // Signin using Facebook
     @IBAction func facebookBtnTapped(_ sender: Any) {
         let facebookLogin = FBSDKLoginManager()
         
@@ -58,7 +75,7 @@ class LoginVC: UIViewController {
         }
         
     }
-    
+    //check if the user has a record after bring the info from the facebook
     func firebaseAuth(_ credential: FIRAuthCredential){
         FIRAuth.auth()?.signIn(with: credential, completion: {(user,error) in
             if error != nil{
@@ -66,36 +83,48 @@ class LoginVC: UIViewController {
             }
             else{
                 print("LoginVC: Successfully authenticated with Firebase")
-                
+                if let user = user{
+                    self.completeSignin(userId: user.uid)
+                }
             }
         })
     }
     
+    //SignIn using an email and password
     @IBAction func signInTapped(_ sender: Any) {
         if let email = emailField.text, let password = passwordField.text{
             FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: {(user,error)in
                 if error == nil{
                     print("LoginVC: Email user authenticated with Firebase")
+                    if let user = user{
+                        self.completeSignin(userId: user.uid)
+                    }
                 }
                 else{
                     print("LoginVC: authentication failed with Firebase, please recheck your email or password")
                     /*
-                    //create new account
-                    FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user,error) in
-                        if error != nil{
-                            print("LoginVC: Unable to authenticated with Firebase using email")
-                        }else{
-                            print("LoginVC: Successfully authenticated email with Firebase")
-                        }
-                    })
-                    */
-                    
+                     //create new account
+                     FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user,error) in
+                     if error != nil{
+                     print("LoginVC: Unable to authenticated with Firebase using email")
+                     }else{
+                     print("LoginVC: Successfully authenticated email with Firebase")
+                     self.completeSignin(userId: user.uid)
+                     
+                     }
+                     })
+                     */
                     
                 }
             })
-            
-            
         }
+    }
+    
+    //store the credintial into the keychain
+    func completeSignin(userId: String){
+        let keychainResult =  KeychainWrapper.standard.set(userId, forKey: KEY_ID)
+        print("LoginVC: data saved to keychain \(keychainResult)")
+        performSegue(withIdentifier: "goToHomePage", sender: nil)
         
     }
 }

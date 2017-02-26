@@ -23,10 +23,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Volunteers-sm_Fotor" translatesAutoresizingMaskIntoConstraints="NO" id="1kO-Ca-s9i">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </imageView>
                             <view alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B1N-4s-thY" customClass="FancyView" customModule="AnaVolunteer" customModuleProvider="target">
-                                <rect key="frame" x="29" y="281" width="317" height="257"/>
+                                <rect key="frame" x="29" y="237" width="317" height="257"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="GQp-zd-WkM">
                                         <rect key="frame" x="25" y="30" width="267" height="208"/>
@@ -111,7 +111,7 @@
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="brigades_icon" translatesAutoresizingMaskIntoConstraints="NO" id="bP9-7B-XWF">
-                                <rect key="frame" x="95" y="84" width="185" height="128"/>
+                                <rect key="frame" x="95" y="40" width="185" height="128"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="185" id="XgM-w5-Xbt"/>
@@ -119,7 +119,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ANA Volunteer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VUe-hu-lp2">
-                                <rect key="frame" x="47" y="227" width="281" height="24"/>
+                                <rect key="frame" x="47" y="183" width="281" height="24"/>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="19"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -148,16 +148,17 @@
                     <connections>
                         <outlet property="emailField" destination="tIr-rW-ivt" id="ctm-UO-6Qb"/>
                         <outlet property="passwordField" destination="ZBh-re-vVp" id="xPz-t6-8u9"/>
+                        <segue destination="1C8-9x-27f" kind="show" identifier="goToHomePage" id="RFn-1Y-BOo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1261.5999999999999" y="-160.56971514242881"/>
         </scene>
-        <!--View Controller-->
+        <!--Home PageVC-->
         <scene sceneID="SAW-TL-IPg">
             <objects>
-                <viewController id="1C8-9x-27f" sceneMemberID="viewController">
+                <viewController id="1C8-9x-27f" customClass="HomePageVC" customModule="AnaVolunteer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UI7-Oa-AU8"/>
                         <viewControllerLayoutGuide type="bottom" id="377-Jq-NVi"/>
@@ -173,13 +174,25 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQx-DS-y8d">
+                                <rect key="frame" x="161" y="195" width="53" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Signout"/>
+                                <connections>
+                                    <action selector="logoutTapped:" destination="1C8-9x-27f" eventType="touchUpInside" id="dHJ-KI-ygR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="logoutBtn" destination="eQx-DS-y8d" id="QPb-wu-abM"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="goToLoginPage" id="0Hf-s0-bHu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EDS-iS-v4L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2182" y="123"/>
+            <point key="canvasLocation" x="2181.5999999999999" y="122.78860569715144"/>
         </scene>
         <!--SignupVC-->
         <scene sceneID="KRL-5u-tMl">
@@ -194,7 +207,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="regBkg" translatesAutoresizingMaskIntoConstraints="NO" id="CLt-Pp-14c">
-                                <rect key="frame" x="0.0" y="64" width="385" height="196"/>
+                                <rect key="frame" x="0.0" y="20" width="385" height="240"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0GG-lM-wNo" customClass="FancyView" customModule="AnaVolunteer" customModuleProvider="target">
                                 <rect key="frame" x="21" y="240" width="343" height="407"/>
@@ -383,4 +396,7 @@
         <image name="regBkg" width="385" height="245"/>
         <image name="user" width="128" height="128"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="0Hf-s0-bHu"/>
+    </inferredMetricsTieBreakers>
 </document>
