@@ -10,6 +10,17 @@
 		0E06FB9F0AA55C04A06C5EF3 /* Pods_AnaVolunteer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49C773795270A4C4C0C197E5 /* Pods_AnaVolunteer.framework */; };
 		AC07DEDC1E6295AE000BD40F /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC07DEDB1E6295AE000BD40F /* CustomTabBarController.swift */; };
 		AC07DEDE1E62A39F000BD40F /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC07DEDD1E62A39F000BD40F /* Media.xcassets */; };
+		AC07DEE01E6365A3000BD40F /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC07DEDF1E6365A3000BD40F /* MaterialView.swift */; };
+		AC07DEE51E636BE1000BD40F /* DK Pimpernel.otf in Resources */ = {isa = PBXBuildFile; fileRef = AC07DEE31E636BE1000BD40F /* DK Pimpernel.otf */; };
+		AC07DEE61E636BE1000BD40F /* Fragmentcore.otf in Resources */ = {isa = PBXBuildFile; fileRef = AC07DEE41E636BE1000BD40F /* Fragmentcore.otf */; };
+		AC07DEE91E636F75000BD40F /* Moon Flower Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC07DEE71E636F75000BD40F /* Moon Flower Bold.ttf */; };
+		AC07DEEA1E636F75000BD40F /* Moon Flower.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC07DEE81E636F75000BD40F /* Moon Flower.ttf */; };
+		AC07DEEC1E63700B000BD40F /* paperdaisy-demo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC07DEEB1E63700B000BD40F /* paperdaisy-demo.ttf */; };
+		AC07DEEE1E6370D9000BD40F /* angelina 2.TTF in Resources */ = {isa = PBXBuildFile; fileRef = AC07DEED1E6370D9000BD40F /* angelina 2.TTF */; };
+		AC07DEF01E63765D000BD40F /* FrenteH1-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = AC07DEEF1E63765D000BD40F /* FrenteH1-Regular.otf */; };
+		AC07DEF41E6376A0000BD40F /* Existence-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = AC07DEF11E6376A0000BD40F /* Existence-Light.otf */; };
+		AC07DEF51E6376A0000BD40F /* Existence-StencilLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = AC07DEF21E6376A0000BD40F /* Existence-StencilLight.otf */; };
+		AC07DEF61E6376A0000BD40F /* Existence-UnicaseLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = AC07DEF31E6376A0000BD40F /* Existence-UnicaseLight.otf */; };
 		AC266AA01E60FA340009B6E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC266A9F1E60FA340009B6E3 /* AppDelegate.swift */; };
 		AC266AA21E60FA340009B6E3 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC266AA11E60FA340009B6E3 /* LoginVC.swift */; };
 		AC266AA51E60FA340009B6E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC266AA31E60FA340009B6E3 /* Main.storyboard */; };
@@ -37,6 +48,17 @@
 		49C773795270A4C4C0C197E5 /* Pods_AnaVolunteer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnaVolunteer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC07DEDB1E6295AE000BD40F /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		AC07DEDD1E62A39F000BD40F /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		AC07DEDF1E6365A3000BD40F /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
+		AC07DEE31E636BE1000BD40F /* DK Pimpernel.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DK Pimpernel.otf"; sourceTree = "<group>"; };
+		AC07DEE41E636BE1000BD40F /* Fragmentcore.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fragmentcore.otf; sourceTree = "<group>"; };
+		AC07DEE71E636F75000BD40F /* Moon Flower Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Moon Flower Bold.ttf"; sourceTree = "<group>"; };
+		AC07DEE81E636F75000BD40F /* Moon Flower.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Moon Flower.ttf"; sourceTree = "<group>"; };
+		AC07DEEB1E63700B000BD40F /* paperdaisy-demo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "paperdaisy-demo.ttf"; sourceTree = "<group>"; };
+		AC07DEED1E6370D9000BD40F /* angelina 2.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "angelina 2.TTF"; sourceTree = "<group>"; };
+		AC07DEEF1E63765D000BD40F /* FrenteH1-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FrenteH1-Regular.otf"; sourceTree = "<group>"; };
+		AC07DEF11E6376A0000BD40F /* Existence-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Existence-Light.otf"; sourceTree = "<group>"; };
+		AC07DEF21E6376A0000BD40F /* Existence-StencilLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Existence-StencilLight.otf"; sourceTree = "<group>"; };
+		AC07DEF31E6376A0000BD40F /* Existence-UnicaseLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Existence-UnicaseLight.otf"; sourceTree = "<group>"; };
 		AC266A9C1E60FA340009B6E3 /* AnaVolunteer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnaVolunteer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC266A9F1E60FA340009B6E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC266AA11E60FA340009B6E3 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -88,6 +110,29 @@
 				4757BD8A77F604AA472BFBD9 /* Pods-AnaVolunteer.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		AC07DEE21E636B3F000BD40F /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				AC07DEF11E6376A0000BD40F /* Existence-Light.otf */,
+				AC07DEF21E6376A0000BD40F /* Existence-StencilLight.otf */,
+				AC07DEF31E6376A0000BD40F /* Existence-UnicaseLight.otf */,
+				AC07DEEF1E63765D000BD40F /* FrenteH1-Regular.otf */,
+				AC07DEED1E6370D9000BD40F /* angelina 2.TTF */,
+				AC07DEEB1E63700B000BD40F /* paperdaisy-demo.ttf */,
+				AC07DEE71E636F75000BD40F /* Moon Flower Bold.ttf */,
+				AC07DEE81E636F75000BD40F /* Moon Flower.ttf */,
+				AC07DEE31E636BE1000BD40F /* DK Pimpernel.otf */,
+				AC07DEE41E636BE1000BD40F /* Fragmentcore.otf */,
+				AC266ABA1E6131830009B6E3 /* Always Forever Bold.ttf */,
+				AC266ABB1E6131830009B6E3 /* Always Forever.ttf */,
+				AC266ABE1E61318A0009B6E3 /* JennaSue.ttf */,
+				AC266AC01E6131950009B6E3 /* angelina.TTF */,
+				AC266AC21E6133E30009B6E3 /* Haiku's Script version 09 Bold.ttf */,
+				AC266AC31E6133E30009B6E3 /* Haiku's Script version 09 Regular.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 		AC266A931E60FA340009B6E3 = {
@@ -153,6 +198,7 @@
 				AC266ACB1E6155670009B6E3 /* FancyButton.swift */,
 				AC266AD11E6225120009B6E3 /* CustomeTextFieldWithIcon.swift */,
 				AC07DEDB1E6295AE000BD40F /* CustomTabBarController.swift */,
+				AC07DEDF1E6365A3000BD40F /* MaterialView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -160,12 +206,7 @@
 		AC266AB91E6131630009B6E3 /* Res */ = {
 			isa = PBXGroup;
 			children = (
-				AC266ABA1E6131830009B6E3 /* Always Forever Bold.ttf */,
-				AC266ABB1E6131830009B6E3 /* Always Forever.ttf */,
-				AC266ABE1E61318A0009B6E3 /* JennaSue.ttf */,
-				AC266AC01E6131950009B6E3 /* angelina.TTF */,
-				AC266AC21E6133E30009B6E3 /* Haiku's Script version 09 Bold.ttf */,
-				AC266AC31E6133E30009B6E3 /* Haiku's Script version 09 Regular.ttf */,
+				AC07DEE21E636B3F000BD40F /* Fonts */,
 			);
 			name = Res;
 			sourceTree = "<group>";
@@ -246,16 +287,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC07DEE61E636BE1000BD40F /* Fragmentcore.otf in Resources */,
+				AC07DEF41E6376A0000BD40F /* Existence-Light.otf in Resources */,
+				AC07DEE51E636BE1000BD40F /* DK Pimpernel.otf in Resources */,
 				AC07DEDE1E62A39F000BD40F /* Media.xcassets in Resources */,
 				AC266ABC1E6131830009B6E3 /* Always Forever Bold.ttf in Resources */,
 				AC266AAD1E60FA340009B6E3 /* LaunchScreen.storyboard in Resources */,
+				AC07DEF01E63765D000BD40F /* FrenteH1-Regular.otf in Resources */,
 				AC266AB51E61015B0009B6E3 /* GoogleService-Info.plist in Resources */,
+				AC07DEEC1E63700B000BD40F /* paperdaisy-demo.ttf in Resources */,
 				AC266ABD1E6131830009B6E3 /* Always Forever.ttf in Resources */,
+				AC07DEEA1E636F75000BD40F /* Moon Flower.ttf in Resources */,
+				AC07DEF51E6376A0000BD40F /* Existence-StencilLight.otf in Resources */,
 				AC266AC51E6133E30009B6E3 /* Haiku's Script version 09 Regular.ttf in Resources */,
 				AC266ABF1E61318A0009B6E3 /* JennaSue.ttf in Resources */,
+				AC07DEEE1E6370D9000BD40F /* angelina 2.TTF in Resources */,
 				AC266AA51E60FA340009B6E3 /* Main.storyboard in Resources */,
 				AC266AC41E6133E30009B6E3 /* Haiku's Script version 09 Bold.ttf in Resources */,
 				AC266AC11E6131950009B6E3 /* angelina.TTF in Resources */,
+				AC07DEF61E6376A0000BD40F /* Existence-UnicaseLight.otf in Resources */,
+				AC07DEE91E636F75000BD40F /* Moon Flower Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +368,7 @@
 				AC266AD51E6266CE0009B6E3 /* HomePageVC.swift in Sources */,
 				AC266AD01E6203F60009B6E3 /* SignupVC.swift in Sources */,
 				AC266ACE1E61FDAC0009B6E3 /* CustomTextField.swift in Sources */,
+				AC07DEE01E6365A3000BD40F /* MaterialView.swift in Sources */,
 				AC266AD21E6225120009B6E3 /* CustomeTextFieldWithIcon.swift in Sources */,
 				AC266ACC1E6155670009B6E3 /* FancyButton.swift in Sources */,
 				AC07DEDC1E6295AE000BD40F /* CustomTabBarController.swift in Sources */,

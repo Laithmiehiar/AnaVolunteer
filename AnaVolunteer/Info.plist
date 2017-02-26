@@ -43,7 +43,7 @@
 	<key>Item5</key>
 	<string>Haiku&apos;s Script version 09 Bold.ttf</string>
 	<key>Item3</key>
-	<string>angelina.TTF</string>
+	<string>angelina 2.TTF</string>
 	<key>Item2</key>
 	<string>JennaSue.ttf</string>
 	<key>Item1</key>
@@ -57,26 +57,25 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-    
-    <key>CFBundleURLTypes</key>
-    <array>
-        <dict>
-            <key>CFBundleURLSchemes</key>
-            <array>
-                <string>fb424366251231953</string>
-            </array>
-        </dict>
-    </array>
-    <key>FacebookAppID</key>
-    <string>424366251231953</string>
-    <key>FacebookDisplayName</key>
-    <string>ANA Volunteer</string>
-    <key>LSApplicationQueriesSchemes</key>
-    <array>
-        <string>fbapi</string>
-        <string>fb-messenger-api</string>
-        <string>fbauth2</string>
-        <string>fbshareextension</string>
-    </array>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb424366251231953</string>
+			</array>
+		</dict>
+	</array>
+	<key>FacebookAppID</key>
+	<string>424366251231953</string>
+	<key>FacebookDisplayName</key>
+	<string>ANA Volunteer</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbapi</string>
+		<string>fb-messenger-api</string>
+		<string>fbauth2</string>
+		<string>fbshareextension</string>
+	</array>
 </dict>
 </plist>
