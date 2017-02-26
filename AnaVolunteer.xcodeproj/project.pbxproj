@@ -54,6 +54,7 @@
 		AC266ACD1E61FDAC0009B6E3 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		AC266ACF1E6203F60009B6E3 /* SignupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 5; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		AC266AD11E6225120009B6E3 /* CustomeTextFieldWithIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomeTextFieldWithIcon.swift; sourceTree = "<group>"; };
+		AC266AD31E6244A40009B6E3 /* AnaVolunteer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AnaVolunteer.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,12 +107,13 @@
 		AC266A9E1E60FA340009B6E3 /* AnaVolunteer */ = {
 			isa = PBXGroup;
 			children = (
+				AC266AD31E6244A40009B6E3 /* AnaVolunteer.entitlements */,
 				AC266AC61E6152D30009B6E3 /* Util */,
 				AC266AB91E6131630009B6E3 /* Res */,
 				AC266AB81E61103E0009B6E3 /* View */,
 				AC266AB61E6110310009B6E3 /* Model */,
-				AC266A9F1E60FA340009B6E3 /* AppDelegate.swift */,
 				AC266AB71E6110360009B6E3 /* Controller */,
+				AC266A9F1E60FA340009B6E3 /* AppDelegate.swift */,
 				AC266AA31E60FA340009B6E3 /* Main.storyboard */,
 				AC266AAB1E60FA340009B6E3 /* LaunchScreen.storyboard */,
 				AC266AA91E60FA340009B6E3 /* Assets.xcassets */,
@@ -205,7 +207,13 @@
 				TargetAttributes = {
 					AC266A9B1E60FA340009B6E3 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = R95548KD4W;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -432,6 +440,8 @@
 			baseConfigurationReference = 3FFBBE6437791354A3009D70 /* Pods-AnaVolunteer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AnaVolunteer/AnaVolunteer.entitlements;
+				DEVELOPMENT_TEAM = R95548KD4W;
 				INFOPLIST_FILE = AnaVolunteer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mihyar.AnaVolunteer;
@@ -445,6 +455,8 @@
 			baseConfigurationReference = 4757BD8A77F604AA472BFBD9 /* Pods-AnaVolunteer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AnaVolunteer/AnaVolunteer.entitlements;
+				DEVELOPMENT_TEAM = R95548KD4W;
 				INFOPLIST_FILE = AnaVolunteer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mihyar.AnaVolunteer;
