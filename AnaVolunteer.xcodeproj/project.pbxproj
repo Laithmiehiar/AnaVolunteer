@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0E06FB9F0AA55C04A06C5EF3 /* Pods_AnaVolunteer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49C773795270A4C4C0C197E5 /* Pods_AnaVolunteer.framework */; };
-		AC07DEDA1E628CE7000BD40F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC07DED91E628CE7000BD40F /* Assets.xcassets */; };
+		AC07DEDC1E6295AE000BD40F /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC07DEDB1E6295AE000BD40F /* CustomTabBarController.swift */; };
+		AC07DEDE1E62A39F000BD40F /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC07DEDD1E62A39F000BD40F /* Media.xcassets */; };
 		AC266AA01E60FA340009B6E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC266A9F1E60FA340009B6E3 /* AppDelegate.swift */; };
 		AC266AA21E60FA340009B6E3 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC266AA11E60FA340009B6E3 /* LoginVC.swift */; };
 		AC266AA51E60FA340009B6E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC266AA31E60FA340009B6E3 /* Main.storyboard */; };
@@ -34,7 +35,8 @@
 		3FFBBE6437791354A3009D70 /* Pods-AnaVolunteer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnaVolunteer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnaVolunteer/Pods-AnaVolunteer.debug.xcconfig"; sourceTree = "<group>"; };
 		4757BD8A77F604AA472BFBD9 /* Pods-AnaVolunteer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnaVolunteer.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnaVolunteer/Pods-AnaVolunteer.release.xcconfig"; sourceTree = "<group>"; };
 		49C773795270A4C4C0C197E5 /* Pods_AnaVolunteer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnaVolunteer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AC07DED91E628CE7000BD40F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
+		AC07DEDB1E6295AE000BD40F /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		AC07DEDD1E62A39F000BD40F /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		AC266A9C1E60FA340009B6E3 /* AnaVolunteer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnaVolunteer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC266A9F1E60FA340009B6E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC266AA11E60FA340009B6E3 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -116,7 +118,7 @@
 				AC266AB61E6110310009B6E3 /* Model */,
 				AC266AB71E6110360009B6E3 /* Controller */,
 				AC266A9F1E60FA340009B6E3 /* AppDelegate.swift */,
-				AC07DED91E628CE7000BD40F /* Assets.xcassets */,
+				AC07DEDD1E62A39F000BD40F /* Media.xcassets */,
 				AC266AA31E60FA340009B6E3 /* Main.storyboard */,
 				AC266AAB1E60FA340009B6E3 /* LaunchScreen.storyboard */,
 				AC266AAE1E60FA340009B6E3 /* Info.plist */,
@@ -150,6 +152,7 @@
 				AC266AC91E6153920009B6E3 /* FancyView.swift */,
 				AC266ACB1E6155670009B6E3 /* FancyButton.swift */,
 				AC266AD11E6225120009B6E3 /* CustomeTextFieldWithIcon.swift */,
+				AC07DEDB1E6295AE000BD40F /* CustomTabBarController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -243,11 +246,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC07DEDE1E62A39F000BD40F /* Media.xcassets in Resources */,
 				AC266ABC1E6131830009B6E3 /* Always Forever Bold.ttf in Resources */,
 				AC266AAD1E60FA340009B6E3 /* LaunchScreen.storyboard in Resources */,
 				AC266AB51E61015B0009B6E3 /* GoogleService-Info.plist in Resources */,
 				AC266ABD1E6131830009B6E3 /* Always Forever.ttf in Resources */,
-				AC07DEDA1E628CE7000BD40F /* Assets.xcassets in Resources */,
 				AC266AC51E6133E30009B6E3 /* Haiku's Script version 09 Regular.ttf in Resources */,
 				AC266ABF1E61318A0009B6E3 /* JennaSue.ttf in Resources */,
 				AC266AA51E60FA340009B6E3 /* Main.storyboard in Resources */,
@@ -316,6 +319,7 @@
 				AC266ACE1E61FDAC0009B6E3 /* CustomTextField.swift in Sources */,
 				AC266AD21E6225120009B6E3 /* CustomeTextFieldWithIcon.swift in Sources */,
 				AC266ACC1E6155670009B6E3 /* FancyButton.swift in Sources */,
+				AC07DEDC1E6295AE000BD40F /* CustomTabBarController.swift in Sources */,
 				AC266AA21E60FA340009B6E3 /* LoginVC.swift in Sources */,
 				AC266ACA1E6153920009B6E3 /* FancyView.swift in Sources */,
 				AC266AA01E60FA340009B6E3 /* AppDelegate.swift in Sources */,

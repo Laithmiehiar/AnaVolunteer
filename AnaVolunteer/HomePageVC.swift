@@ -14,7 +14,7 @@ class HomePageVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.definesPresentationContext = true
         // Do any additional setup after loading the view.
     }
     
@@ -30,6 +30,7 @@ class HomePageVC: UIViewController {
         try! FIRAuth.auth()?.signOut()
         performSegue(withIdentifier: "goToLoginPage", sender: nil)
     }
+    
     
     /*
      // MARK: - Navigation
