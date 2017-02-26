@@ -11,8 +11,8 @@ import FBSDKLoginKit
 import Firebase
 class LoginVC: UIViewController {
     
-    @IBOutlet weak var email: CustomeTextFieldWithIcon!
-    @IBOutlet weak var password: CustomeTextFieldWithIcon!
+    @IBOutlet weak var emailField: CustomeTextFieldWithIcon!
+    @IBOutlet weak var passwordField: CustomeTextFieldWithIcon!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -21,9 +21,9 @@ class LoginVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         //set email-text field icon
-        setLeftIcontoTextField(iconName: "mail", textFieldName: email)
+        setLeftIcontoTextField(iconName: "mail", textFieldName: emailField)
         //set password-text field icon
-        setLeftIcontoTextField(iconName: "pwd", textFieldName: password)
+        setLeftIcontoTextField(iconName: "pwd", textFieldName: passwordField)
         // Hide the navigation bar on the this view controller
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
@@ -70,5 +70,32 @@ class LoginVC: UIViewController {
             }
         })
     }
+    
+    @IBAction func signInTapped(_ sender: Any) {
+        if let email = emailField.text, let password = passwordField.text{
+            FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: {(user,error)in
+                if error == nil{
+                    print("LoginVC: Email user authenticated with Firebase")
+                }
+                else{
+                    print("LoginVC: authentication failed with Firebase, please recheck your email or password")
+                    /*
+                    //create new account
+                    FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user,error) in
+                        if error != nil{
+                            print("LoginVC: Unable to authenticated with Firebase using email")
+                        }else{
+                            print("LoginVC: Successfully authenticated email with Firebase")
+                        }
+                    })
+                    */
+                    
+                    
+                }
+            })
+            
+            
+        }
+        
+    }
 }
-

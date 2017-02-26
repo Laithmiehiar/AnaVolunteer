@@ -58,6 +58,9 @@
                                                 <state key="normal" title="SIGN IN">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="signInTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qWr-n2-oft"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="unJ-tf-NSe" customClass="FancyButton" customModule="AnaVolunteer" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="138" width="267" height="30"/>
@@ -143,8 +146,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="0uB-OK-vgm"/>
                     <connections>
-                        <outlet property="email" destination="tIr-rW-ivt" id="Gac-3N-8GM"/>
-                        <outlet property="password" destination="ZBh-re-vVp" id="wrx-Bv-XyD"/>
+                        <outlet property="emailField" destination="tIr-rW-ivt" id="ctm-UO-6Qb"/>
+                        <outlet property="passwordField" destination="ZBh-re-vVp" id="xPz-t6-8u9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -26,7 +26,6 @@ class SignupVC: UIViewController {
       self.navigationController?.navigationBar.backItem?.title=""
      
     }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
           //set email-text field icon
@@ -34,13 +33,7 @@ class SignupVC: UIViewController {
           //set password-text field icon
           setLeftIcontoTextField(iconName: "pwd", textFieldName: password)
           setLeftIcontoTextField(iconName: "pwd", textFieldName: confirmPassword)
-
-     
-     
-    
-     
     }
-
      func setLeftIcontoTextField(iconName : String , textFieldName:CustomeTextFieldWithIcon){
           let imageview = UIImageView(frame: CGRect(x:15, y: 10, width: 20, height: 20))
           let image = UIImage(named: iconName)
