@@ -9,12 +9,19 @@
 import UIKit
 import SwiftKeychainWrapper
 import Firebase
-class HomePageVC: UIViewController {
+class HomePageVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
     @IBOutlet weak var logoutBtn: UIButton!
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.definesPresentationContext = true
+        self.hideKeyboardWhenTappedAround()
+
+        tableView.dataSource = self
+        tableView.delegate = self
+        
         // Do any additional setup after loading the view.
     }
     
@@ -32,6 +39,18 @@ class HomePageVC: UIViewController {
     }
     
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+         let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as! PostCell
+        return cell
+    }
     /*
      // MARK: - Navigation
      

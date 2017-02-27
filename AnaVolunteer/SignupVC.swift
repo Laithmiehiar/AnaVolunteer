@@ -24,6 +24,8 @@ class SignupVC: UIViewController {
         super.viewDidLoad()
         //remove "back" from the cursor side in the navigation bar
       self.navigationController?.navigationBar.backItem?.title=""
+      self.hideKeyboardWhenTappedAround()
+
      
     }
     override func viewWillAppear(_ animated: Bool) {

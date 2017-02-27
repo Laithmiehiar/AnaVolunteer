@@ -21,6 +21,9 @@
 		AC07DEF41E6376A0000BD40F /* Existence-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = AC07DEF11E6376A0000BD40F /* Existence-Light.otf */; };
 		AC07DEF51E6376A0000BD40F /* Existence-StencilLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = AC07DEF21E6376A0000BD40F /* Existence-StencilLight.otf */; };
 		AC07DEF61E6376A0000BD40F /* Existence-UnicaseLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = AC07DEF31E6376A0000BD40F /* Existence-UnicaseLight.otf */; };
+		AC16AEC61E63F10700693E1C /* DismissKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16AEC51E63F10700693E1C /* DismissKeyboard.swift */; };
+		AC16AEC81E63F58300693E1C /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16AEC71E63F58300693E1C /* PostCell.swift */; };
+		AC16AECC1E64016D00693E1C /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16AECB1E64016D00693E1C /* CircleImageView.swift */; };
 		AC266AA01E60FA340009B6E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC266A9F1E60FA340009B6E3 /* AppDelegate.swift */; };
 		AC266AA21E60FA340009B6E3 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC266AA11E60FA340009B6E3 /* LoginVC.swift */; };
 		AC266AA51E60FA340009B6E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC266AA31E60FA340009B6E3 /* Main.storyboard */; };
@@ -59,6 +62,9 @@
 		AC07DEF11E6376A0000BD40F /* Existence-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Existence-Light.otf"; sourceTree = "<group>"; };
 		AC07DEF21E6376A0000BD40F /* Existence-StencilLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Existence-StencilLight.otf"; sourceTree = "<group>"; };
 		AC07DEF31E6376A0000BD40F /* Existence-UnicaseLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Existence-UnicaseLight.otf"; sourceTree = "<group>"; };
+		AC16AEC51E63F10700693E1C /* DismissKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissKeyboard.swift; sourceTree = "<group>"; };
+		AC16AEC71E63F58300693E1C /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		AC16AECB1E64016D00693E1C /* CircleImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
 		AC266A9C1E60FA340009B6E3 /* AnaVolunteer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnaVolunteer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC266A9F1E60FA340009B6E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC266AA11E60FA340009B6E3 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -199,6 +205,9 @@
 				AC266AD11E6225120009B6E3 /* CustomeTextFieldWithIcon.swift */,
 				AC07DEDB1E6295AE000BD40F /* CustomTabBarController.swift */,
 				AC07DEDF1E6365A3000BD40F /* MaterialView.swift */,
+				AC16AEC51E63F10700693E1C /* DismissKeyboard.swift */,
+				AC16AEC71E63F58300693E1C /* PostCell.swift */,
+				AC16AECB1E64016D00693E1C /* CircleImageView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -372,10 +381,13 @@
 				AC266AD21E6225120009B6E3 /* CustomeTextFieldWithIcon.swift in Sources */,
 				AC266ACC1E6155670009B6E3 /* FancyButton.swift in Sources */,
 				AC07DEDC1E6295AE000BD40F /* CustomTabBarController.swift in Sources */,
+				AC16AEC81E63F58300693E1C /* PostCell.swift in Sources */,
 				AC266AA21E60FA340009B6E3 /* LoginVC.swift in Sources */,
 				AC266ACA1E6153920009B6E3 /* FancyView.swift in Sources */,
 				AC266AA01E60FA340009B6E3 /* AppDelegate.swift in Sources */,
+				AC16AEC61E63F10700693E1C /* DismissKeyboard.swift in Sources */,
 				AC266AA81E60FA340009B6E3 /* AnaVolunteer.xcdatamodeld in Sources */,
+				AC16AECC1E64016D00693E1C /* CircleImageView.swift in Sources */,
 				AC266AC81E6152F60009B6E3 /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
