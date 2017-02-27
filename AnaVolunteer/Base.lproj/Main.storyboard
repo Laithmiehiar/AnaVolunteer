@@ -197,7 +197,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yn9-gd-ldt" customClass="FancyView" customModule="AnaVolunteer" customModuleProvider="target">
+                            <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yn9-gd-ldt" customClass="FancyView" customModule="AnaVolunteer" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="377" height="50"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logout" translatesAutoresizingMaskIntoConstraints="NO" id="wZc-Pu-OpB">
@@ -211,7 +211,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnM-cO-YBe">
-                                        <rect key="frame" x="8" y="13" width="40" height="40"/>
+                                        <rect key="frame" x="8" y="18" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="516-rE-O4L"/>
                                             <constraint firstAttribute="height" constant="40" id="wzs-16-TgH"/>
@@ -224,7 +224,7 @@
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="gnM-cO-YBe" firstAttribute="leading" secondItem="yn9-gd-ldt" secondAttribute="leading" constant="8" id="6dT-EH-dfB"/>
-                                    <constraint firstItem="gnM-cO-YBe" firstAttribute="top" secondItem="yn9-gd-ldt" secondAttribute="top" constant="13" id="BUM-zS-Pgm"/>
+                                    <constraint firstItem="gnM-cO-YBe" firstAttribute="top" secondItem="yn9-gd-ldt" secondAttribute="top" constant="18" id="BUM-zS-Pgm"/>
                                     <constraint firstItem="wZc-Pu-OpB" firstAttribute="leading" secondItem="yn9-gd-ldt" secondAttribute="leading" constant="8" id="GdQ-WG-4mg"/>
                                     <constraint firstAttribute="height" constant="50" id="HWg-no-LhL"/>
                                     <constraint firstItem="wZc-Pu-OpB" firstAttribute="top" secondItem="yn9-gd-ldt" secondAttribute="top" constant="13" id="wPD-ng-8kh"/>
@@ -279,7 +279,7 @@
                                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="materialDesign" value="YES"/>
                                                                     </userDefinedRuntimeAttributes>
                                                                 </label>
-                                                                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOX-sz-mzk">
+                                                                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOX-sz-mzk" customClass="RoundButton" customModule="AnaVolunteer" customModuleProvider="target">
                                                                     <rect key="frame" x="253" y="9" width="77" height="30"/>
                                                                     <color key="backgroundColor" red="0.32599133253097534" green="0.7508399486541748" blue="0.78579616546630859" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <constraints>
@@ -290,9 +290,6 @@
                                                                         <color key="titleColor" red="0.99991279840000002" green="1" blue="0.99988144639999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     </state>
                                                                     <userDefinedRuntimeAttributes>
-                                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                                            <integer key="value" value="10"/>
-                                                                        </userDefinedRuntimeAttribute>
                                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="materialDesign" value="YES"/>
                                                                     </userDefinedRuntimeAttributes>
                                                                 </button>
@@ -313,6 +310,7 @@
                                                                             <fontDescription key="fontDescription" name="MoonFlower" family="Moon Flower" pointSize="25"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
+                                                                            <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </label>
                                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thumb-up" translatesAutoresizingMaskIntoConstraints="NO" id="cHj-8u-dl3">
                                                                             <rect key="frame" x="177" y="0.0" width="20" height="20"/>
@@ -329,6 +327,7 @@
                                                                             <fontDescription key="fontDescription" name="MoonFlower" family="Moon Flower" pointSize="25"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
+                                                                            <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </label>
                                                                     </subviews>
                                                                 </stackView>
@@ -348,6 +347,7 @@
                                                                     <fontDescription key="fontDescription" name="MoonFlower" family="Moon Flower" pointSize="25"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
+                                                                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </label>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="7id-Tr-PvX">
                                                                     <rect key="frame" x="18" y="109" width="317" height="20"/>
@@ -407,7 +407,7 @@
                                                                 <constraint firstAttribute="bottom" secondItem="7id-Tr-PvX" secondAttribute="bottom" constant="10" id="xDY-IU-lfG"/>
                                                             </constraints>
                                                         </view>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="addfav" translatesAutoresizingMaskIntoConstraints="NO" id="ewF-hd-ROn">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="addfav2-1" translatesAutoresizingMaskIntoConstraints="NO" id="ewF-hd-ROn">
                                                             <rect key="frame" x="295" y="-4" width="36" height="46"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="46" id="HRb-Wh-56H"/>
@@ -422,7 +422,7 @@
                                                             </constraints>
                                                         </button>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.9999127984046936" green="1" blue="0.99988144636154175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="FmY-0O-kDN" secondAttribute="trailing" constant="28" id="9Yv-j1-7EU"/>
                                                         <constraint firstItem="FmY-0O-kDN" firstAttribute="top" secondItem="IgU-x9-Fqw" secondAttribute="top" constant="-4" id="A7D-XY-jVA"/>
@@ -785,7 +785,7 @@
     </scenes>
     <resources>
         <image name="Volunteers-sm_Fotor" width="1080" height="1290"/>
-        <image name="addfav" width="64" height="64"/>
+        <image name="addfav2-1" width="64" height="64"/>
         <image name="avatar" width="64" height="64"/>
         <image name="bkg" width="1080" height="1920"/>
         <image name="brigades_icon" width="200" height="200"/>
