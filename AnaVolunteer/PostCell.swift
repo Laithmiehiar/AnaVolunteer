@@ -16,13 +16,13 @@ class PostCell: UITableViewCell {
     @IBOutlet weak var likesNo: UILabel!
     @IBOutlet weak var postedBy: UILabel!
     @IBOutlet weak var category: UIButton!
-    @IBOutlet weak var addfav: UIButton!
-    @IBOutlet weak var deletefav: UIButton!
+
 
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        postImg.contentMode = .scaleToFill
     }
 
    

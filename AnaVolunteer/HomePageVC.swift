@@ -18,9 +18,8 @@ class HomePageVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         super.viewDidLoad()
         self.definesPresentationContext = true
         self.hideKeyboardWhenTappedAround()
-
-        tableView.dataSource = self
         tableView.delegate = self
+        tableView.dataSource = self
         
         // Do any additional setup after loading the view.
     }
@@ -48,7 +47,16 @@ class HomePageVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-         let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as! PostCell
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath) as! PostCell
+        //configure your cell
+        
+        cell.postImg.image =  UIImage(named: "eventbkg")
+        cell.eventName.text = "Test Event"
+        cell.timeEvent.text = "12:00 PM"
+        cell.location.text = "Jabal Al weabideh-saqyeh"
+        cell.postedBy.text = "Laith Mihyar"
+        cell.likesNo.text = "14"
         return cell
     }
     /*
