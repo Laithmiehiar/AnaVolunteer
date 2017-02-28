@@ -679,6 +679,9 @@
                                         <state key="normal" title="CREATE ACCOUNT">
                                             <color key="titleColor" red="0.96229773610000002" green="0.96229773610000002" blue="0.96229773610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="createAccountTapped:" destination="n6E-LF-6AD" eventType="touchUpInside" id="1Sc-Gn-FEq"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -749,7 +752,7 @@
                         <outlet property="confirmPassword" destination="l0b-Fg-pyw" id="Srq-VO-yPh"/>
                         <outlet property="createAccountBtn" destination="Ukh-5R-7i0" id="3sR-np-E9t"/>
                         <outlet property="email" destination="zWN-gY-Fn6" id="DwM-cl-wIn"/>
-                        <outlet property="fname" destination="JgH-2W-3mm" id="dmf-OV-WKq"/>
+                        <outlet property="fname" destination="JgH-2W-3mm" id="hpD-Pb-gUv"/>
                         <outlet property="lname" destination="8f7-gR-6RY" id="p46-Tt-4W5"/>
                         <outlet property="password" destination="x6M-hM-sNj" id="yHK-49-FcQ"/>
                         <outlet property="profileImage" destination="W76-sE-Qdw" id="xr3-PS-IXb"/>

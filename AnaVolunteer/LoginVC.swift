@@ -86,7 +86,8 @@ class LoginVC: UIViewController {
             else{
                 print("LoginVC: Successfully authenticated with Firebase")
                 if let user = user{
-                    self.completeSignin(userId: user.uid)
+                    let userData = ["provider:": credential.provider]
+                    self.completeSignin(userId: user.uid,userData: userData)
                 }
             }
         })
@@ -99,31 +100,20 @@ class LoginVC: UIViewController {
                 if error == nil{
                     print("LoginVC: Email user authenticated with Firebase")
                     if let user = user{
-                        self.completeSignin(userId: user.uid)
+                        let userData = ["provider:": user.providerID]
+                        self.completeSignin(userId: user.uid,userData: userData)
                     }
                 }
                 else{
                     print("LoginVC: authentication failed with Firebase, please recheck your email or password")
-                    /*
-                     //create new account
-                     FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user,error) in
-                     if error != nil{
-                     print("LoginVC: Unable to authenticated with Firebase using email")
-                     }else{
-                     print("LoginVC: Successfully authenticated email with Firebase")
-                     self.completeSignin(userId: user.uid)
-                     
-                     }
-                     })
-                     */
-                    
                 }
             })
         }
     }
     
     //store the credintial into the keychain
-    func completeSignin(userId: String){
+    func completeSignin(userId: String, userData: Dictionary<String,String>){
+        DataService.ds.createFirebaseDBUser(uid: userId, userData: userData)
         let keychainResult =  KeychainWrapper.standard.set(userId, forKey: KEY_ID)
         print("LoginVC: data saved to keychain \(keychainResult)")
         performSegue(withIdentifier: "goToHomePage", sender: nil)

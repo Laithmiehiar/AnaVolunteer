@@ -9,6 +9,8 @@
 import UIKit
 import SwiftKeychainWrapper
 import Firebase
+import Elissa
+
 class HomePageVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var logoutBtn: UIButton!
@@ -20,7 +22,7 @@ class HomePageVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         self.hideKeyboardWhenTappedAround()
         tableView.delegate = self
         tableView.dataSource = self
-        
+        someActionTrigger()
         // Do any additional setup after loading the view.
     }
     
@@ -68,5 +70,17 @@ class HomePageVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
      // Pass the selected object to the new view controller.
      }
      */
-    
+    func someActionTrigger() {
+        
+        let elissaConfig = ElissaConfiguration()
+        elissaConfig.message = "Share An Event"
+        elissaConfig.image = UIImage(named: "event")
+        elissaConfig.font = UIFont.systemFont(ofSize: 17)
+        elissaConfig.textColor = UIColor(red: 91/255, green: 91/255, blue: 91/255, alpha: 1.0)
+        elissaConfig.backgroundColor = UIColor(red: 241/255, green: 215/255, blue: 85/255, alpha: 1.0)
+        
+        showElissaFromTabbar(at: 2, configuration: elissaConfig) {
+            Elissa.dismiss()
+        }
+    }
 }

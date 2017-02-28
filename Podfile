@@ -12,7 +12,7 @@ target 'AnaVolunteer' do
   pod 'Firebase/Storage'
   pod 'FBSDKLoginKit'
   pod 'SwiftKeychainWrapper'
-  
-
+  pod 'Elissa'
+  pod 'UITextField+Shake', '~> 1.1'
 
 end

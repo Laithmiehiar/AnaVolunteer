@@ -5,6 +5,7 @@ PODS:
   - Bolts/AppLinks (1.8.4):
     - Bolts/Tasks
   - Bolts/Tasks (1.8.4)
+  - Elissa (2.1)
   - FBSDKCoreKit (4.19.0):
     - Bolts (~> 1.7)
   - FBSDKLoginKit (4.19.0):
@@ -51,6 +52,7 @@ PODS:
   - SwiftKeychainWrapper (3.0.1)
 
 DEPENDENCIES:
+  - Elissa
   - FBSDKLoginKit
   - Firebase/Auth
   - Firebase/Core
@@ -60,6 +62,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
+  Elissa: 621295ddf46a98df9d04749c24756690fade267b
   FBSDKCoreKit: 894b2b6eda6a4c8c4204e92e59cc355709ef045c
   FBSDKLoginKit: 83ca4d8f12a2022570af9fd6aacf27f6b425b99f
   Firebase: 85a581fb04e44f63ae9f4fbc8d6dabf4a4c18653
@@ -73,6 +76,6 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 6f8d8b28b7e345549ac471071608170b31cb4977
   SwiftKeychainWrapper: 38952a3636320ae61bad3513cadd870929de7a4a
 
-PODFILE CHECKSUM: 8a864668c9c97de61e4188431ef282b9dfb80445
+PODFILE CHECKSUM: e338da13ad5465026fa6d1c5609d5c77fc180122
 
 COCOAPODS: 1.2.0

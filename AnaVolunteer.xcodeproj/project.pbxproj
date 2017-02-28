@@ -44,6 +44,7 @@
 		AC266AD21E6225120009B6E3 /* CustomeTextFieldWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC266AD11E6225120009B6E3 /* CustomeTextFieldWithIcon.swift */; };
 		AC266AD51E6266CE0009B6E3 /* HomePageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC266AD41E6266CE0009B6E3 /* HomePageVC.swift */; };
 		AC8C9E521E64AB330040838C /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8C9E511E64AB330040838C /* RoundButton.swift */; };
+		AC8C9E551E6535300040838C /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8C9E541E6535300040838C /* DataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +90,7 @@
 		AC266AD31E6244A40009B6E3 /* AnaVolunteer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AnaVolunteer.entitlements; sourceTree = "<group>"; };
 		AC266AD41E6266CE0009B6E3 /* HomePageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageVC.swift; sourceTree = "<group>"; };
 		AC8C9E511E64AB330040838C /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		AC8C9E541E6535300040838C /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 		AC266A9E1E60FA340009B6E3 /* AnaVolunteer */ = {
 			isa = PBXGroup;
 			children = (
+				AC8C9E531E6535020040838C /* Services */,
 				AC266AD31E6244A40009B6E3 /* AnaVolunteer.entitlements */,
 				AC266AC61E6152D30009B6E3 /* Util */,
 				AC266AB91E6131630009B6E3 /* Res */,
@@ -229,6 +232,14 @@
 				AC266AC71E6152F60009B6E3 /* Constant.swift */,
 			);
 			name = Util;
+			sourceTree = "<group>";
+		};
+		AC8C9E531E6535020040838C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AC8C9E541E6535300040838C /* DataService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -393,6 +404,7 @@
 				AC266AA81E60FA340009B6E3 /* AnaVolunteer.xcdatamodeld in Sources */,
 				AC16AECC1E64016D00693E1C /* CircleImageView.swift in Sources */,
 				AC266AC81E6152F60009B6E3 /* Constant.swift in Sources */,
+				AC8C9E551E6535300040838C /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

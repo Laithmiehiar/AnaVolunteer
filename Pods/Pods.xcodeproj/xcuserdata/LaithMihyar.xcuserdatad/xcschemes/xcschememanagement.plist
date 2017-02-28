@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Elissa.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>FBSDKCoreKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,12 +52,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>34E72CA8E446DC189B366E0613681CF9</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>3F904775D7E908120CD64096DA5842C8</key>
+		<key>28C5144BDDC3599A82D84E029ECA21C4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -73,6 +73,16 @@
 			<true/>
 		</dict>
 		<key>C052BEBFBD0AB5218CC64BA3450F6547</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EA68CE7F839AFFD9543A94A7AAB2489F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EEA322CB749269ED9AA3A40F1C2FA182</key>
 		<dict>
 			<key>primary</key>
 			<true/>
