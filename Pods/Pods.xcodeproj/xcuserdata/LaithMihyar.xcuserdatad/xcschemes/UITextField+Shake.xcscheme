@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2A95D8D0688B7124456A79F98EEFA7FC"
-               BuildableName = "Pods_AnaVolunteer.framework"
-               BlueprintName = "Pods-AnaVolunteer"
+               BlueprintIdentifier = "12206B11567C1D8DB747DA947F822914"
+               BuildableName = "UITextField_Shake.framework"
+               BlueprintName = "UITextField+Shake"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2A95D8D0688B7124456A79F98EEFA7FC"
-            BuildableName = "Pods_AnaVolunteer.framework"
-            BlueprintName = "Pods-AnaVolunteer"
+            BlueprintIdentifier = "12206B11567C1D8DB747DA947F822914"
+            BuildableName = "UITextField_Shake.framework"
+            BlueprintName = "UITextField+Shake"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

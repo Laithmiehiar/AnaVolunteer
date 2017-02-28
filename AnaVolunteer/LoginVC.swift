@@ -105,7 +105,7 @@ class LoginVC: UIViewController {
                     }
                 }
                 else{
-                    print("LoginVC: authentication failed with Firebase, please recheck your email or password")
+                    print("LoginVC: authentication failed with Firebase, please recheck your email or password \(error)")
                 }
             })
         }

@@ -50,6 +50,7 @@ PODS:
   - GoogleToolboxForMac/NSString+URLArguments (2.1.1)
   - GTMSessionFetcher/Core (1.1.8)
   - SwiftKeychainWrapper (3.0.1)
+  - UITextField+Shake (1.1.2)
 
 DEPENDENCIES:
   - Elissa
@@ -59,6 +60,7 @@ DEPENDENCIES:
   - Firebase/Database
   - Firebase/Storage
   - SwiftKeychainWrapper
+  - UITextField+Shake (~> 1.1)
 
 SPEC CHECKSUMS:
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
@@ -75,7 +77,8 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMSessionFetcher: 6f8d8b28b7e345549ac471071608170b31cb4977
   SwiftKeychainWrapper: 38952a3636320ae61bad3513cadd870929de7a4a
+  UITextField+Shake: 47cc0429dafb3da580686339ad2da091249a8ea2
 
-PODFILE CHECKSUM: e338da13ad5465026fa6d1c5609d5c77fc180122
+PODFILE CHECKSUM: a019f7719f75de3f1af1d82dc97b2c6417cbd70b
 
 COCOAPODS: 1.2.0
