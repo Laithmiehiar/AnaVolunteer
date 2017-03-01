@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class PostCell: UITableViewCell {
     @IBOutlet weak var postImg: UIImageView!
@@ -16,8 +17,8 @@ class PostCell: UITableViewCell {
     @IBOutlet weak var likesNo: UILabel!
     @IBOutlet weak var postedBy: UILabel!
     @IBOutlet weak var category: UIButton!
-
-
+    
+    
     var post: Post!
     
     override func awakeFromNib() {
@@ -26,7 +27,7 @@ class PostCell: UITableViewCell {
         postImg.contentMode = .scaleToFill
     }
     
-    func configureCell(post: Post){
+    func configureCell(post: Post, img: UIImage? = nil){
         self.post = post
         self.eventName.text = post.eventCaption
         self.timeEvent.text = post.time
@@ -35,10 +36,30 @@ class PostCell: UITableViewCell {
         self.postedBy.text = post.postedBy
         self.category.setTitle(post.category, for: .normal)
         
+        if img != nil{
+            self.postImg.image = img
+        }else{
+            let ref = FIRStorage.storage().reference(forURL: post.imageUrl)
+            ref.data(withMaxSize: 5 * 1024, completion: {(data,error) in
+                if error != nil {
+                    print("PostCell: Unable to download image from Firebase Storage \(error)")
+                }else{
+                    print("PostCell: Image downloaded from Firebase Storage")
+                    if let imgData = data{
+                        if let img = UIImage(data: imgData){
+                            self.postImg.image = img
+                            HomePageVC.imageCache.setObject(img, forKey: post.imageUrl as NSString)
+                            
+                        }
+                    }
+                }
+            })
+        }
     }
-
-   
     
     
-
+    
+    
+    
+    
 }

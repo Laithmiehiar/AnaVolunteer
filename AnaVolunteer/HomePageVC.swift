@@ -17,6 +17,8 @@ class HomePageVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     
     var posts = [Post]()
+    static var imageCache: NSCache<NSString,UIImage> = NSCache()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.definesPresentationContext = true
@@ -68,9 +70,16 @@ class HomePageVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         print("HomePageVC: \(post.eventCaption)")
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as? PostCell{
-            //configure your cell
-            cell.configureCell(post: post)
-            return cell
+            
+            if let img = HomePageVC.imageCache.object(forKey: post.imageUrl as NSString){
+                //configure your cell
+                cell.configureCell(post: post,img: img)
+                return cell
+            }else{
+                //configure your cell
+                cell.configureCell(post: post)
+                return cell
+            }
         }else{
             return PostCell()
         }

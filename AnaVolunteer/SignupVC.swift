@@ -22,8 +22,9 @@ class SignupVC: UIViewController , UIImagePickerControllerDelegate, UINavigation
      @IBOutlet weak var profileImage: UIImageView!
      @IBOutlet weak var message: UILabel!
      
-     var imagePicker: UIImagePickerController!
      
+     var imagePicker: UIImagePickerController!
+
      override func viewDidLoad() {
           super.viewDidLoad()
           //remove "back" from the cursor side in the navigation bar
