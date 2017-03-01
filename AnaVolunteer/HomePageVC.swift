@@ -16,6 +16,7 @@ class HomePageVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var logoutBtn: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
+    var posts = [Post]()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.definesPresentationContext = true
@@ -23,7 +24,20 @@ class HomePageVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.delegate = self
         tableView.dataSource = self
         someActionTrigger()
-        // Do any additional setup after loading the view.
+        
+        DataService.ds.REF_POSTS.observe(.value, with: {(snapshot) in
+            if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot]{
+                for snap in snapshot{
+                    print ("SNAP: \(snap)")
+                    if let postDict = snap.value as? Dictionary<String, AnyObject>{
+                        let key = snap.key
+                        let post = Post(postKey: key, postData: postDict)
+                        self.posts.append(post)
+                    }
+                }
+            }
+            self.tableView.reloadData()
+        })
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -45,21 +59,22 @@ class HomePageVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return posts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        //loop into the post data
+        let post = posts[indexPath.row]
+        print("HomePageVC: \(post.eventCaption)")
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath) as! PostCell
-        //configure your cell
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as? PostCell{
+            //configure your cell
+            cell.configureCell(post: post)
+            return cell
+        }else{
+            return PostCell()
+        }
         
-        cell.postImg.image =  UIImage(named: "eventbkg")
-        cell.eventName.text = "Test Event"
-        cell.timeEvent.text = "12:00 PM"
-        cell.location.text = "Jabal Al weabideh-saqyeh"
-        cell.postedBy.text = "Laith Mihyar"
-        cell.likesNo.text = "14"
-        return cell
     }
     /*
      // MARK: - Navigation

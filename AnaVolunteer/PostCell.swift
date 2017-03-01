@@ -18,11 +18,23 @@ class PostCell: UITableViewCell {
     @IBOutlet weak var category: UIButton!
 
 
+    var post: Post!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         postImg.contentMode = .scaleToFill
+    }
+    
+    func configureCell(post: Post){
+        self.post = post
+        self.eventName.text = post.eventCaption
+        self.timeEvent.text = post.time
+        self.location.text = post.location
+        self.likesNo.text = ("\(post.likes)")
+        self.postedBy.text = post.postedBy
+        self.category.setTitle(post.category, for: .normal)
+        
     }
 
    

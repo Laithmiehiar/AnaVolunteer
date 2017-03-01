@@ -45,6 +45,7 @@
 		AC266AD51E6266CE0009B6E3 /* HomePageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC266AD41E6266CE0009B6E3 /* HomePageVC.swift */; };
 		AC8C9E521E64AB330040838C /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8C9E511E64AB330040838C /* RoundButton.swift */; };
 		AC8C9E551E6535300040838C /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8C9E541E6535300040838C /* DataService.swift */; };
+		AC8C9E571E666D950040838C /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8C9E561E666D930040838C /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +92,7 @@
 		AC266AD41E6266CE0009B6E3 /* HomePageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageVC.swift; sourceTree = "<group>"; };
 		AC8C9E511E64AB330040838C /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		AC8C9E541E6535300040838C /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		AC8C9E561E666D930040838C /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +189,7 @@
 		AC266AB61E6110310009B6E3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AC8C9E561E666D930040838C /* Post.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 				AC16AEC61E63F10700693E1C /* DismissKeyboard.swift in Sources */,
 				AC266AA81E60FA340009B6E3 /* AnaVolunteer.xcdatamodeld in Sources */,
 				AC16AECC1E64016D00693E1C /* CircleImageView.swift in Sources */,
+				AC8C9E571E666D950040838C /* Post.swift in Sources */,
 				AC266AC81E6152F60009B6E3 /* Constant.swift in Sources */,
 				AC8C9E551E6535300040838C /* DataService.swift in Sources */,
 			);
