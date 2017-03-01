@@ -11,7 +11,7 @@ import SwiftKeychainWrapper
 import Firebase
 import UITextField_Shake
 
-class SignupVC: UIViewController {
+class SignupVC: UIViewController , UIImagePickerControllerDelegate, UINavigationControllerDelegate{
      
      @IBOutlet weak var fname: CustomTextField!
      @IBOutlet weak var lname: CustomTextField!
@@ -20,9 +20,9 @@ class SignupVC: UIViewController {
      @IBOutlet weak var confirmPassword: CustomeTextFieldWithIcon!
      @IBOutlet weak var createAccountBtn: UIButton!
      @IBOutlet weak var profileImage: UIImageView!
-     @IBOutlet weak var uploadImage: UIButton!
-     
      @IBOutlet weak var message: UILabel!
+     
+     var imagePicker: UIImagePickerController!
      
      override func viewDidLoad() {
           super.viewDidLoad()
@@ -30,6 +30,13 @@ class SignupVC: UIViewController {
           self.navigationController?.navigationBar.backItem?.title=""
           self.hideKeyboardWhenTappedAround()
           self.email.keyboardType = UIKeyboardType.emailAddress
+          
+          //pick an image
+          imagePicker = UIImagePickerController()
+          imagePicker.allowsEditing = true
+          imagePicker.delegate = self
+          
+          
           
      }
      override func viewWillAppear(_ animated: Bool) {
@@ -102,7 +109,7 @@ class SignupVC: UIViewController {
                }
           }
      }
-     
+  
      
      //store the credintial into the keychain
      func completeSignin(userId: String, userData: Dictionary<String,String>){
@@ -112,6 +119,21 @@ class SignupVC: UIViewController {
           performSegue(withIdentifier: "goToHomePage2", sender: nil)
           
      }
+     
+     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+          if let image = info[UIImagePickerControllerEditedImage] as? UIImage{
+               profileImage.image = image
+          }else{
+               print("SignupVC: Invalid image was selected")
+          }
+          imagePicker.dismiss(animated: true, completion: nil)
+     }
+     
+     @IBAction func addImageTapped(_ sender: Any) {
+          present(imagePicker, animated: true, completion: nil)
+     }
+     
+     
      func validateEmail(candidate: String) -> Bool {
           let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}"
           return NSPredicate(format: "SELF MATCHES %@", emailRegex).evaluate(with: candidate)

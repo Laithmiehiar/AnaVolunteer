@@ -70,6 +70,8 @@
 	<string>424366251231953</string>
 	<key>FacebookDisplayName</key>
 	<string>ANA Volunteer</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Access for photos is required for posting</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>fbapi</string>
