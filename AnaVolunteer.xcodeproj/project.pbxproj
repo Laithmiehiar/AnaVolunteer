@@ -26,7 +26,7 @@
 		AC16AECC1E64016D00693E1C /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16AECB1E64016D00693E1C /* CircleImageView.swift */; };
 		AC266AA01E60FA340009B6E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC266A9F1E60FA340009B6E3 /* AppDelegate.swift */; };
 		AC266AA21E60FA340009B6E3 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC266AA11E60FA340009B6E3 /* LoginVC.swift */; };
-		AC266AA51E60FA340009B6E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC266AA31E60FA340009B6E3 /* Main.storyboard */; };
+		AC266AA51E60FA340009B6E3 /* address.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC266AA31E60FA340009B6E3 /* address.storyboard */; };
 		AC266AA81E60FA340009B6E3 /* AnaVolunteer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC266AA61E60FA340009B6E3 /* AnaVolunteer.xcdatamodeld */; };
 		AC266AAD1E60FA340009B6E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC266AAB1E60FA340009B6E3 /* LaunchScreen.storyboard */; };
 		AC266AB51E61015B0009B6E3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC266AB41E61015B0009B6E3 /* GoogleService-Info.plist */; };
@@ -71,7 +71,7 @@
 		AC266A9C1E60FA340009B6E3 /* AnaVolunteer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnaVolunteer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC266A9F1E60FA340009B6E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC266AA11E60FA340009B6E3 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
-		AC266AA41E60FA340009B6E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AC266AA41E60FA340009B6E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/address.storyboard; sourceTree = "<group>"; };
 		AC266AA71E60FA340009B6E3 /* AnaVolunteer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AnaVolunteer.xcdatamodel; sourceTree = "<group>"; };
 		AC266AAC1E60FA340009B6E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC266AAE1E60FA340009B6E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -177,7 +177,7 @@
 				AC266AB71E6110360009B6E3 /* Controller */,
 				AC266A9F1E60FA340009B6E3 /* AppDelegate.swift */,
 				AC07DEDD1E62A39F000BD40F /* Media.xcassets */,
-				AC266AA31E60FA340009B6E3 /* Main.storyboard */,
+				AC266AA31E60FA340009B6E3 /* address.storyboard */,
 				AC266AAB1E60FA340009B6E3 /* LaunchScreen.storyboard */,
 				AC266AAE1E60FA340009B6E3 /* Info.plist */,
 				AC266AA61E60FA340009B6E3 /* AnaVolunteer.xcdatamodeld */,
@@ -328,7 +328,7 @@
 				AC266AC51E6133E30009B6E3 /* Haiku's Script version 09 Regular.ttf in Resources */,
 				AC266ABF1E61318A0009B6E3 /* JennaSue.ttf in Resources */,
 				AC07DEEE1E6370D9000BD40F /* angelina 2.TTF in Resources */,
-				AC266AA51E60FA340009B6E3 /* Main.storyboard in Resources */,
+				AC266AA51E60FA340009B6E3 /* address.storyboard in Resources */,
 				AC266AC41E6133E30009B6E3 /* Haiku's Script version 09 Bold.ttf in Resources */,
 				AC266AC11E6131950009B6E3 /* angelina.TTF in Resources */,
 				AC07DEF61E6376A0000BD40F /* Existence-UnicaseLight.otf in Resources */,
@@ -415,12 +415,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		AC266AA31E60FA340009B6E3 /* Main.storyboard */ = {
+		AC266AA31E60FA340009B6E3 /* address.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				AC266AA41E60FA340009B6E3 /* Base */,
 			);
-			name = Main.storyboard;
+			name = address.storyboard;
 			sourceTree = "<group>";
 		};
 		AC266AAB1E60FA340009B6E3 /* LaunchScreen.storyboard */ = {

@@ -105,6 +105,7 @@ class LoginVC: UIViewController {
                     }
                 }
                 else{
+                    self.alertDialogPopup(alertTitle: "Warning!", alertMessage: "please recheck your email or passwor", buttonTitle: "Ok")
                     print("LoginVC: authentication failed with Firebase, please recheck your email or password \(error)")
                 }
             })
@@ -118,5 +119,11 @@ class LoginVC: UIViewController {
         print("LoginVC: data saved to keychain \(keychainResult)")
         performSegue(withIdentifier: "goToHomePage", sender: nil)
         
+    }
+    
+    func alertDialogPopup(alertTitle: String, alertMessage: String, buttonTitle: String){
+        let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: buttonTitle, style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }

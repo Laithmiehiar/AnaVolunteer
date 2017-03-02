@@ -113,7 +113,7 @@ class SignupVC: UIViewController , UIImagePickerControllerDelegate, UINavigation
           FIRAuth.auth()?.createUser(withEmail: email.text!, password: password.text!, completion: { (user,error) in
                if error != nil{
                     print("SignupVC: Unable to authenticated with Firebase using email \(error)")
-                         self.alertDialogPopup(alertTitle: "HEY!", alertMessage: "The email address is already in use by another account!", buttonTitle: "Ok")
+                    self.alertDialogPopup(alertTitle: "HEY!", alertMessage: "The email address is already in use by another account!", buttonTitle: "Ok")
                     
                }else{
                     print("SignupVC: Successfully authenticated email with Firebase")
@@ -156,88 +156,6 @@ class SignupVC: UIViewController , UIImagePickerControllerDelegate, UINavigation
           
           
           
-          
-          //          if (fname.text?.isEmpty)! || (lname.text?.isEmpty)! || (email.text?.isEmpty)! || (password.text?.isEmpty)! || (confirmPassword.text?.isEmpty)!{
-          //               //empty field is exist
-          //               if (fname.text?.isEmpty)!{
-          //                    self.fname.shake()
-          //               }else if (lname.text?.isEmpty)!{
-          //                    self.lname.shake()
-          //               }else if (email.text?.isEmpty)!{
-          //                    self.email.shake()
-          //               }
-          //               else if  (password.text?.isEmpty)!{
-          //                    self.password.shake()
-          //               }
-          //               else if (confirmPassword.text?.isEmpty)!{
-          //                    self.confirmPassword.shake()
-          //               }
-          //          }else{
-          //               if validateEmail(candidate: email.text!){
-          //                    if (password.text == confirmPassword.text){
-          //                         if((password.text?.characters.count)! >= 6){
-          //                         message.isHidden = true
-          //
-          //                              //check if the user select an image
-          //                              if let userImg = profileImage.image{
-          //
-          //                                   if let imgData = UIImageJPEGRepresentation(userImg, 2.0){
-          //                                        let imgUId = NSUUID().uuidString
-          //                                        let metadata = FIRStorageMetadata()
-          //                                        metadata.contentType = "image/jpeg"
-          //
-          //                                        DataService.ds.REF_POSTS_IMAGES.child(imgUId).put(imgData, metadata: metadata){ (metadata,error) in
-          //                                             if error != nil{
-          //                                                  print("SignupVC: Unable to upload image to firebase storage \(error)")
-          //                                             }else{
-          //                                                  print("SignupVC: Successfully uploaded image to firebase storage")
-          //
-          //                                                  let downloadURL = metadata?.downloadURL()?.absoluteString
-          //
-          //                                             }
-          //                                        }
-          //                                   }
-          //
-          //
-          //                              }else{
-          //                                        print("SignupVC: No Image Selected")
-          //                                        return
-          //                              }
-          //
-          //                         //create new account
-          //                         FIRAuth.auth()?.createUser(withEmail: email.text!, password: password.text!, completion: { (user,error) in
-          //                              if error != nil{
-          //                                   print("SignupVC: Unable to authenticated with Firebase using email \(error)")
-          //                              }else{
-          //                                   print("SignupVC: Successfully authenticated email with Firebase")
-          //                                   let userData = ["provider:": user!.providerID]
-          //                                   self.completeSignin(userId: user!.uid,userData: userData)
-          //                              }
-          //                         })
-          //
-          //
-          //
-          //                         }else{
-          //                              message.isHidden = false
-          //                              message.text = "Password should be at least 6 characters"
-          //                              self.password.shake()
-          //                              self.confirmPassword.shake()
-          //                         }
-          //                    }else{
-          //                         //unmatch passwords
-          //                         message.isHidden = false
-          //                         message.text = "Passwords unmatched"
-          //                         self.password.shake()
-          //                         self.confirmPassword.shake()
-          //                    }
-          //
-          //               }else{
-          //                    //Invalid email
-          //                    message.isHidden = false
-          //                    message.text = "Invalid Email"
-          //                    self.email.shake()
-          //               }
-          //          }
      }
      
      

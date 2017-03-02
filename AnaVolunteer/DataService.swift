@@ -13,14 +13,14 @@ let DATA_BASE = FIRDatabase.database().reference()
 let STORAGE_BASE = FIRStorage.storage().reference()
 
 class DataService{
-
+    
     static let ds = DataService()
     
     //DB references
     private var _REF_BASE = DATA_BASE
     private var _REF_USERS = DATA_BASE.child("users")
     private var _REF_POSTS = DATA_BASE.child("posts")
-
+    
     //Storage references
     private var _REF_POSTS_IMAGES = STORAGE_BASE.child("post-pics")
     var REF_BASE: FIRDatabaseReference{
@@ -41,15 +41,15 @@ class DataService{
     func createFirebaseDBUser(uid:String, userData:Dictionary<String,String>){
         _REF_USERS.child(uid).updateChildValues(userData)
     }
-    
+//    func validateFirebaseDBUser(uid:String, userData:Dictionary<String,String>){
+//        _REF_USERS.child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
+//            if snapshot.hasChild(userData["email"]!){
+//                print("true rooms exist")
+//            }else{
+//                print("false room doesn't exist")
+//            }
+//            
+//            
+//        })
+//    }
 }
-/* 
- service firebase.storage {
- match /b/ana-volunteer.appspot.com/o {
- match /{allPaths=**} {
- allow read, write: if request.auth != null;
- }
- }
- }
-
- */
