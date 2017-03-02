@@ -749,7 +749,6 @@
                     </view>
                     <connections>
                         <outlet property="confirmPassword" destination="l0b-Fg-pyw" id="Srq-VO-yPh"/>
-                        <outlet property="createAccountBtn" destination="Ukh-5R-7i0" id="3sR-np-E9t"/>
                         <outlet property="email" destination="zWN-gY-Fn6" id="DwM-cl-wIn"/>
                         <outlet property="fname" destination="JgH-2W-3mm" id="hpD-Pb-gUv"/>
                         <outlet property="lname" destination="8f7-gR-6RY" id="p46-Tt-4W5"/>

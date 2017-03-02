@@ -11,6 +11,7 @@ import Firebase
 
 let DATA_BASE = FIRDatabase.database().reference()
 let STORAGE_BASE = FIRStorage.storage().reference()
+
 class DataService{
 
     static let ds = DataService()
@@ -42,3 +43,13 @@ class DataService{
     }
     
 }
+/* 
+ service firebase.storage {
+ match /b/ana-volunteer.appspot.com/o {
+ match /{allPaths=**} {
+ allow read, write: if request.auth != null;
+ }
+ }
+ }
+
+ */
