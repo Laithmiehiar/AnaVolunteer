@@ -36,20 +36,12 @@
 	</array>
 	<key>UIAppFonts</key>
 	<array>
-		<string></string>
+		<string>Always Forever Bold.ttf</string>
+		<string>Always Forever.ttf</string>
+		<string>JennaSue.ttf</string>
+		<string>angelina 2.TTF</string>
+		<string>Haiku&apos;s Script version 09 Bold.ttf</string>
 	</array>
-	<key>Item4</key>
-	<string>Haiku&apos;s Script version 09 Bold.ttf</string>
-	<key>Item5</key>
-	<string>Haiku&apos;s Script version 09 Bold.ttf</string>
-	<key>Item3</key>
-	<string>angelina 2.TTF</string>
-	<key>Item2</key>
-	<string>JennaSue.ttf</string>
-	<key>Item1</key>
-	<string>Always Forever.ttf</string>
-	<key>Item0</key>
-	<string>Always Forever Bold.ttf</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
