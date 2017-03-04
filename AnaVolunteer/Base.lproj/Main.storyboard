@@ -610,26 +610,8 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EUD-np-pPH">
                                                         <rect key="frame" x="32" y="217" width="311" height="189"/>
                                                         <subviews>
-                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FNt-eB-seN">
-                                                                <rect key="frame" x="8" y="136" width="295" height="30"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="30" id="RaK-tm-5QV"/>
-                                                                </constraints>
-                                                                <nil key="textColor"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
-                                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="NmT-32-gTx">
-                                                                <rect key="frame" x="8" y="61" width="295" height="66"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="66" id="xpL-p3-hMl"/>
-                                                                </constraints>
-                                                                <date key="date" timeIntervalSinceReferenceDate="510210568.40958703">
-                                                                    <!--2017-03-03 05:09:28 +0000-->
-                                                                </date>
-                                                            </datePicker>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="1tw-NV-0yZ">
-                                                                <rect key="frame" x="8" y="8" width="295" height="33"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="g8S-Iz-579">
+                                                                <rect key="frame" x="8" y="0.0" width="295" height="30"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date-Time and Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HfN-xj-wrY">
                                                                         <rect key="frame" x="0.0" y="0.0" width="243" height="28"/>
@@ -642,30 +624,49 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tMV-z9-qSF">
-                                                                        <rect key="frame" x="0.0" y="32" width="295" height="1"/>
+                                                                        <rect key="frame" x="0.0" y="29" width="295" height="1"/>
                                                                         <color key="backgroundColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="1" id="BdM-ns-e5W"/>
+                                                                            <constraint firstAttribute="width" constant="295" id="OmL-lN-VCH"/>
                                                                         </constraints>
                                                                     </view>
                                                                 </subviews>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="33" id="SCe-vg-NUB"/>
+                                                                    <constraint firstAttribute="height" constant="30" id="UQD-iI-lLQ"/>
                                                                 </constraints>
                                                             </stackView>
+                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FNt-eB-seN">
+                                                                <rect key="frame" x="8" y="136" width="295" height="30"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="30" id="RaK-tm-5QV"/>
+                                                                </constraints>
+                                                                <nil key="textColor"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="NmT-32-gTx">
+                                                                <rect key="frame" x="8" y="38" width="295" height="79"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="79" id="xpL-p3-hMl"/>
+                                                                </constraints>
+                                                                <date key="date" timeIntervalSinceReferenceDate="510210568.40958703">
+                                                                    <!--2017-03-03 05:09:28 +0000-->
+                                                                </date>
+                                                            </datePicker>
                                                         </subviews>
                                                         <color key="backgroundColor" red="0.81176470590000005" green="0.84705882349999995" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
-                                                            <constraint firstItem="1tw-NV-0yZ" firstAttribute="leading" secondItem="EUD-np-pPH" secondAttribute="leading" constant="8" id="0PK-pb-Qms"/>
-                                                            <constraint firstItem="FNt-eB-seN" firstAttribute="top" secondItem="NmT-32-gTx" secondAttribute="bottom" constant="9" id="0kO-T0-Imt"/>
+                                                            <constraint firstItem="FNt-eB-seN" firstAttribute="top" secondItem="NmT-32-gTx" secondAttribute="bottom" constant="19" id="0kO-T0-Imt"/>
+                                                            <constraint firstItem="g8S-Iz-579" firstAttribute="leading" secondItem="EUD-np-pPH" secondAttribute="leading" constant="8" id="2Zs-PZ-GBy"/>
+                                                            <constraint firstItem="g8S-Iz-579" firstAttribute="top" secondItem="EUD-np-pPH" secondAttribute="top" id="7Fd-kv-bqy"/>
                                                             <constraint firstItem="NmT-32-gTx" firstAttribute="leading" secondItem="EUD-np-pPH" secondAttribute="leadingMargin" id="9Af-ZY-gRt"/>
                                                             <constraint firstAttribute="trailing" secondItem="FNt-eB-seN" secondAttribute="trailing" constant="8" id="9hR-6C-cnx"/>
-                                                            <constraint firstItem="NmT-32-gTx" firstAttribute="top" secondItem="EUD-np-pPH" secondAttribute="top" constant="61" id="Mpy-xX-M8s"/>
+                                                            <constraint firstItem="NmT-32-gTx" firstAttribute="top" secondItem="EUD-np-pPH" secondAttribute="top" constant="38" id="Mpy-xX-M8s"/>
                                                             <constraint firstItem="NmT-32-gTx" firstAttribute="leading" secondItem="FNt-eB-seN" secondAttribute="leading" id="NMe-1e-gnj"/>
                                                             <constraint firstAttribute="trailing" secondItem="NmT-32-gTx" secondAttribute="trailing" constant="8" id="cQf-qS-hE8"/>
-                                                            <constraint firstItem="1tw-NV-0yZ" firstAttribute="top" secondItem="EUD-np-pPH" secondAttribute="top" constant="8" id="hrH-SE-8jf"/>
                                                             <constraint firstItem="NmT-32-gTx" firstAttribute="trailing" secondItem="FNt-eB-seN" secondAttribute="trailing" id="hur-dT-reN"/>
-                                                            <constraint firstAttribute="trailing" secondItem="1tw-NV-0yZ" secondAttribute="trailing" constant="8" id="ifg-Rx-f7c"/>
+                                                            <constraint firstAttribute="trailing" secondItem="g8S-Iz-579" secondAttribute="trailing" constant="8" id="qtd-wh-eQO"/>
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="boolean" keyPath="materialDesign" value="YES"/>
