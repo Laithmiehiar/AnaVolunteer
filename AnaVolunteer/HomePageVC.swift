@@ -48,6 +48,8 @@ class HomePageVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         self.navigationController?.navigationBar.backItem?.title=""
     }
     
+   
+    
     @IBAction func logoutTapped(_ sender: Any) {
         let keychainResult = KeychainWrapper.standard.removeObject(forKey: KEY_ID)
         print("HomePageVC: ID removed from keychain \(keychainResult)")
@@ -107,4 +109,9 @@ class HomePageVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             Elissa.dismiss()
         }
     }
+    
+    @IBAction func goToEventDetails(_ sender: Any) {
+        performSegue(withIdentifier: "goToEventDetail", sender: nil)
+    }
+    
 }

@@ -1,21 +1,17 @@
 //
-//  ShareAnEventVC.swift
+//  EventDetailsVC.swift
 //  AnaVolunteer
 //
-//  Created by Laith Mihyar on 3/3/17.
+//  Created by Laith Mihyar on 3/5/17.
 //  Copyright © 2017 Laith Mihyar. All rights reserved.
 //
 
 import UIKit
 
-class ShareAnEventVC: UIViewController {
+class EventDetailsVC: UIViewController {
 
-    @IBOutlet weak var scollview: UIScrollView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.hideKeyboardWhenTappedAround()
 
         // Do any additional setup after loading the view.
     }
@@ -25,12 +21,16 @@ class ShareAnEventVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        // Show the navigation bar on other view controllers
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+        //remove "back" from the cursor side in the navigation bar
+        self.navigationController?.navigationBar.backItem?.title=""
+    }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-//        scollview.contentSize = CGSize(width: 320, height: 2000)
+        //        scollview.contentSize = CGSize(width: 320, height: 2000)
     }
-    
-
     /*
     // MARK: - Navigation
 
