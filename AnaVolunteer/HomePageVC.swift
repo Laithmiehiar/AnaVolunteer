@@ -26,29 +26,38 @@ class HomePageVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.delegate = self
         tableView.dataSource = self
         someActionTrigger()
+        //loadData
+        loadData()
         
-        DataService.ds.REF_POSTS.observe(.value, with: {(snapshot) in
+    }
+    
+    func loadData(){
+        self.posts.removeAll()
+        DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
             if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot]{
                 for snap in snapshot{
                     print ("SNAP: \(snap)")
                     if let postDict = snap.value as? Dictionary<String, AnyObject>{
                         let key = snap.key
                         let post = Post(postKey: key, postData: postDict)
-                        self.posts.append(post)
+                        if !(self.posts.contains(where: { $0.postKey == key} )){
+                            self.posts.append(post)
+                            
+                        }
                     }
                 }
             }
+            
             self.tableView.reloadData()
         })
     }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         //remove "back" from the cursor side in the navigation bar
         self.navigationController?.navigationBar.backItem?.title=""
     }
     
-   
+    
     
     @IBAction func logoutTapped(_ sender: Any) {
         let keychainResult = KeychainWrapper.standard.removeObject(forKey: KEY_ID)
@@ -75,13 +84,12 @@ class HomePageVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             
             if let img = HomePageVC.imageCache.object(forKey: post.imageUrl as NSString){
                 //configure your cell
-                cell.configureCell(post: post,img: img)
-                return cell
-            }else{
+                cell.configureCell(post: post, img: img)
+            }else {
                 //configure your cell
                 cell.configureCell(post: post)
-                return cell
             }
+            return cell
         }else{
             return PostCell()
         }
@@ -115,3 +123,4 @@ class HomePageVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
 }
+

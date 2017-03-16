@@ -172,6 +172,7 @@ class SignupVC: UIViewController , UIImagePickerControllerDelegate, UINavigation
           if let image = info[UIImagePickerControllerEditedImage] as? UIImage{
                profileImage.image = image
           }else{
+               alertDialogPopup(alertTitle: "Warning!", alertMessage: "Invalid image was selected", buttonTitle: "Ok")
                print("SignupVC: Invalid image was selected")
           }
           imagePicker.dismiss(animated: true, completion: nil)

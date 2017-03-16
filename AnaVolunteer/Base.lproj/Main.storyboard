@@ -413,23 +413,18 @@
                                                         </view>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="addfav2-1" translatesAutoresizingMaskIntoConstraints="NO" id="ewF-hd-ROn">
                                                             <rect key="frame" x="295" y="-4" width="36" height="46"/>
+                                                            <gestureRecognizers/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="46" id="HRb-Wh-56H"/>
                                                                 <constraint firstAttribute="width" constant="36" id="nlB-Ey-11L"/>
                                                             </constraints>
+                                                            <connections>
+                                                                <outletCollection property="gestureRecognizers" destination="Q7D-f6-zcV" appends="YES" id="nHF-tm-dP7"/>
+                                                            </connections>
                                                         </imageView>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FmY-0O-kDN">
-                                                            <rect key="frame" x="295" y="-4" width="36" height="46"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="36" id="hj8-hK-e6K"/>
-                                                                <constraint firstAttribute="height" constant="46" id="udk-yb-0L4"/>
-                                                            </constraints>
-                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="trailing" secondItem="FmY-0O-kDN" secondAttribute="trailing" constant="28" id="9Yv-j1-7EU"/>
-                                                        <constraint firstItem="FmY-0O-kDN" firstAttribute="top" secondItem="IgU-x9-Fqw" secondAttribute="top" constant="-4" id="A7D-XY-jVA"/>
                                                         <constraint firstItem="ydK-cw-XNs" firstAttribute="leading" secondItem="IgU-x9-Fqw" secondAttribute="leading" constant="8" id="DHP-UR-39D"/>
                                                         <constraint firstAttribute="trailing" secondItem="u48-mM-YcR" secondAttribute="trailing" constant="8" id="EP0-Df-fI5"/>
                                                         <constraint firstAttribute="trailing" secondItem="ydK-cw-XNs" secondAttribute="trailing" constant="8" id="G4j-Sw-vSO"/>
@@ -455,6 +450,7 @@
                                         <connections>
                                             <outlet property="category" destination="HOX-sz-mzk" id="lib-s6-Y4f"/>
                                             <outlet property="eventName" destination="sul-aX-9QH" id="J9Q-NZ-xMj"/>
+                                            <outlet property="favImg" destination="ewF-hd-ROn" id="xkv-2E-F0J"/>
                                             <outlet property="likesNo" destination="jbc-0L-7of" id="6ah-so-mZL"/>
                                             <outlet property="location" destination="d5u-j1-bIG" id="YUb-2c-hhw"/>
                                             <outlet property="postImg" destination="u48-mM-YcR" id="Aem-KK-vxn"/>
@@ -493,6 +489,7 @@
                         <segue destination="xWS-uj-3rK" kind="show" identifier="goToEventDetail" id="RKB-Vy-lBc"/>
                     </connections>
                 </tapGestureRecognizer>
+                <tapGestureRecognizer id="Q7D-f6-zcV"/>
             </objects>
             <point key="canvasLocation" x="1234.4000000000001" y="808.24587706146929"/>
         </scene>
@@ -512,9 +509,9 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="1256"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eventbkg" translatesAutoresizingMaskIntoConstraints="NO" id="Hj0-f0-a7W">
-                                        <rect key="frame" x="0.0" y="-40" width="375" height="265"/>
+                                        <rect key="frame" x="0.0" y="-41" width="375" height="266"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="265" id="ZO3-kv-Bpb"/>
+                                            <constraint firstAttribute="height" constant="266" id="ZO3-kv-Bpb"/>
                                         </constraints>
                                     </imageView>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fXa-mw-pQK">
@@ -884,7 +881,7 @@
                                     <constraint firstItem="Hj0-f0-a7W" firstAttribute="leading" secondItem="4zS-Cc-xim" secondAttribute="leading" id="3jA-Wg-Zm1"/>
                                     <constraint firstAttribute="trailing" secondItem="Hj0-f0-a7W" secondAttribute="trailing" id="6gN-GM-X9d"/>
                                     <constraint firstAttribute="trailing" secondItem="fXa-mw-pQK" secondAttribute="trailing" id="KPE-92-uPJ"/>
-                                    <constraint firstItem="Hj0-f0-a7W" firstAttribute="top" secondItem="4zS-Cc-xim" secondAttribute="top" constant="-40" id="N1l-F5-cnQ"/>
+                                    <constraint firstItem="Hj0-f0-a7W" firstAttribute="top" secondItem="4zS-Cc-xim" secondAttribute="top" constant="-41" id="N1l-F5-cnQ"/>
                                     <constraint firstItem="Hj0-f0-a7W" firstAttribute="centerX" secondItem="4zS-Cc-xim" secondAttribute="centerX" id="OOL-qz-lOo"/>
                                     <constraint firstAttribute="bottom" secondItem="fXa-mw-pQK" secondAttribute="bottom" id="Pad-4l-W2W"/>
                                     <constraint firstItem="fXa-mw-pQK" firstAttribute="top" secondItem="Hj0-f0-a7W" secondAttribute="bottom" constant="1" id="SxN-EM-3c8"/>
@@ -992,11 +989,15 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nm3-BB-XWu">
                                         <rect key="frame" x="8" y="8" width="327" height="186"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QAZ-ii-rne" customClass="CircleImageView" customModule="AnaVolunteer" customModuleProvider="target">
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QAZ-ii-rne">
                                                 <rect key="frame" x="37" y="8" width="252" height="135"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="135" id="ypn-lD-WRZ"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="CNk-V5-Xjm" appends="YES" id="RPI-hu-kHg"/>
+                                                </connections>
                                             </imageView>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Event Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ig1-Fo-bQN">
                                                 <rect key="frame" x="37" y="148" width="252" height="30"/>
@@ -1022,7 +1023,7 @@
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="materialDesign" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fsj-Tb-4wG">
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fsj-Tb-4wG">
                                         <rect key="frame" x="0.0" y="210" width="343" height="1345"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gQA-TS-OcF">
@@ -1117,7 +1118,7 @@
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="NmT-32-gTx">
-                                                                <rect key="frame" x="8" y="38" width="295" height="79"/>
+                                                                <rect key="frame" x="4" y="38" width="303" height="79"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="79" id="xpL-p3-hMl"/>
                                                                 </constraints>
@@ -1131,12 +1132,12 @@
                                                             <constraint firstItem="FNt-eB-seN" firstAttribute="top" secondItem="NmT-32-gTx" secondAttribute="bottom" constant="19" id="0kO-T0-Imt"/>
                                                             <constraint firstItem="g8S-Iz-579" firstAttribute="leading" secondItem="EUD-np-pPH" secondAttribute="leading" constant="8" id="2Zs-PZ-GBy"/>
                                                             <constraint firstItem="g8S-Iz-579" firstAttribute="top" secondItem="EUD-np-pPH" secondAttribute="top" id="7Fd-kv-bqy"/>
-                                                            <constraint firstItem="NmT-32-gTx" firstAttribute="leading" secondItem="EUD-np-pPH" secondAttribute="leadingMargin" id="9Af-ZY-gRt"/>
+                                                            <constraint firstItem="NmT-32-gTx" firstAttribute="leading" secondItem="EUD-np-pPH" secondAttribute="leadingMargin" constant="-4" id="9Af-ZY-gRt"/>
                                                             <constraint firstAttribute="trailing" secondItem="FNt-eB-seN" secondAttribute="trailing" constant="8" id="9hR-6C-cnx"/>
                                                             <constraint firstItem="NmT-32-gTx" firstAttribute="top" secondItem="EUD-np-pPH" secondAttribute="top" constant="38" id="Mpy-xX-M8s"/>
-                                                            <constraint firstItem="NmT-32-gTx" firstAttribute="leading" secondItem="FNt-eB-seN" secondAttribute="leading" id="NMe-1e-gnj"/>
-                                                            <constraint firstAttribute="trailing" secondItem="NmT-32-gTx" secondAttribute="trailing" constant="8" id="cQf-qS-hE8"/>
-                                                            <constraint firstItem="NmT-32-gTx" firstAttribute="trailing" secondItem="FNt-eB-seN" secondAttribute="trailing" id="hur-dT-reN"/>
+                                                            <constraint firstItem="NmT-32-gTx" firstAttribute="leading" secondItem="FNt-eB-seN" secondAttribute="leading" constant="-4" id="NMe-1e-gnj"/>
+                                                            <constraint firstAttribute="trailing" secondItem="NmT-32-gTx" secondAttribute="trailing" constant="4" id="cQf-qS-hE8"/>
+                                                            <constraint firstItem="NmT-32-gTx" firstAttribute="trailing" secondItem="FNt-eB-seN" secondAttribute="trailing" constant="4" id="hur-dT-reN"/>
                                                             <constraint firstAttribute="trailing" secondItem="g8S-Iz-579" secondAttribute="trailing" constant="8" id="qtd-wh-eQO"/>
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
@@ -1619,14 +1620,31 @@
                                                     <constraint firstItem="uCo-Yr-3U8" firstAttribute="leading" secondItem="vZH-WI-F8W" secondAttribute="leading" id="zzX-5Q-hi8"/>
                                                 </constraints>
                                             </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NLl-52-HVn">
+                                                <rect key="frame" x="16" y="1285" width="311" height="40"/>
+                                                <color key="backgroundColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="iMh-DG-oFj"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
+                                                <state key="normal" title="Share">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="shareBtnTapped:" destination="onU-eV-ZVs" eventType="touchUpInside" id="09e-iz-6Db"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="gQA-TS-OcF" secondAttribute="bottom" id="4mf-Y9-UAa"/>
+                                            <constraint firstAttribute="bottom" secondItem="gQA-TS-OcF" secondAttribute="bottom" constant="43" id="4mf-Y9-UAa"/>
                                             <constraint firstItem="gQA-TS-OcF" firstAttribute="top" secondItem="Fsj-Tb-4wG" secondAttribute="top" constant="-13" id="B78-Nk-lgl"/>
+                                            <constraint firstAttribute="trailing" secondItem="NLl-52-HVn" secondAttribute="trailing" constant="16" id="FNC-wo-bz6"/>
+                                            <constraint firstItem="NLl-52-HVn" firstAttribute="top" secondItem="iOn-Mk-usH" secondAttribute="bottom" constant="13" id="I05-N5-aRd"/>
                                             <constraint firstItem="gQA-TS-OcF" firstAttribute="centerX" secondItem="Fsj-Tb-4wG" secondAttribute="centerX" id="PFU-mR-2ce"/>
                                             <constraint firstItem="gQA-TS-OcF" firstAttribute="leading" secondItem="Fsj-Tb-4wG" secondAttribute="leading" constant="-16" id="WAL-iR-FKo"/>
                                             <constraint firstAttribute="trailing" secondItem="gQA-TS-OcF" secondAttribute="trailing" constant="-16" id="kso-PJ-DsH"/>
+                                            <constraint firstItem="NLl-52-HVn" firstAttribute="leading" secondItem="Fsj-Tb-4wG" secondAttribute="leading" constant="16" id="muC-HU-ytu"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="rect" keyPath="frame">
@@ -1645,7 +1663,7 @@
                                     <constraint firstItem="Fsj-Tb-4wG" firstAttribute="trailing" secondItem="Nm3-BB-XWu" secondAttribute="trailing" constant="8" id="NyN-Q2-icO"/>
                                     <constraint firstItem="Fsj-Tb-4wG" firstAttribute="top" secondItem="Nm3-BB-XWu" secondAttribute="bottom" constant="16" id="ZMm-5t-0eX"/>
                                     <constraint firstItem="Nm3-BB-XWu" firstAttribute="top" secondItem="00n-Zo-1Tn" secondAttribute="top" constant="8" id="fPX-Rg-zKA"/>
-                                    <constraint firstItem="Fsj-Tb-4wG" firstAttribute="bottom" secondItem="00n-Zo-1Tn" secondAttribute="bottomMargin" constant="8" id="lKc-mx-wze"/>
+                                    <constraint firstItem="Fsj-Tb-4wG" firstAttribute="bottom" secondItem="00n-Zo-1Tn" secondAttribute="bottomMargin" constant="7" id="lKc-mx-wze"/>
                                     <constraint firstAttribute="trailing" secondItem="Nm3-BB-XWu" secondAttribute="trailing" constant="8" id="qxB-I6-CpN"/>
                                 </constraints>
                             </view>
@@ -1663,12 +1681,33 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="1640"/>
                     <connections>
+                        <outlet property="eventAddress" destination="FNt-eB-seN" id="Pe3-hJ-k86"/>
+                        <outlet property="eventAudience" destination="Jap-TW-emd" id="BA3-RY-zBD"/>
+                        <outlet property="eventAudienceRegistrationLink" destination="IYC-tu-04l" id="FmR-Ih-qCC"/>
+                        <outlet property="eventCategory" destination="PUa-Ag-HhH" id="M7l-he-V9y"/>
+                        <outlet property="eventDateTime" destination="NmT-32-gTx" id="6mW-Wh-aNx"/>
+                        <outlet property="eventDescription" destination="siZ-v6-kUd" id="0AM-xo-bcG"/>
+                        <outlet property="eventFacebookPage" destination="4kJ-GJ-BwK" id="d7Y-TX-kON"/>
+                        <outlet property="eventFees" destination="MK6-Dv-EQg" id="8Zj-FS-qKO"/>
+                        <outlet property="eventImage" destination="QAZ-ii-rne" id="Lj5-MQ-cro"/>
+                        <outlet property="eventInstagramPage" destination="8zG-2h-hti" id="ZJB-p5-4Ws"/>
+                        <outlet property="eventName" destination="Ig1-Fo-bQN" id="bns-iM-8HM"/>
+                        <outlet property="eventSnapchatId" destination="ywW-Ph-zwC" id="tqP-eA-d8J"/>
+                        <outlet property="eventTwitterPage" destination="5xw-ww-5FU" id="fVk-xj-Ljw"/>
+                        <outlet property="eventVolunteersIfNeeded" destination="kaz-Oy-iLs" id="psi-nR-CYc"/>
+                        <outlet property="eventVolunteersRegistrationLink" destination="Jcl-sM-eiB" id="TWv-Qd-O0a"/>
                         <outlet property="scollview" destination="Fsj-Tb-4wG" id="dsG-DE-QOT"/>
+                        <outlet property="sharingHostedProfile" destination="Mb6-Qv-Ym5" id="aLC-CX-X5g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X9o-jz-tym" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="CNk-V5-Xjm">
+                    <connections>
+                        <action selector="eventImageTapped:" destination="onU-eV-ZVs" id="eBP-6H-yS8"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2680.5" y="1246"/>
+            <point key="canvasLocation" x="2679.1999999999998" y="1245.8770614692655"/>
         </scene>
         <!--SignupVC-->
         <scene sceneID="KRL-5u-tMl">
@@ -1888,7 +1927,7 @@
         <image name="volunteerNeeded" width="385" height="247"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="5bS-6w-Onq"/>
+        <segue reference="dSj-KB-KfV"/>
         <segue reference="HW2-EZ-zGo"/>
     </inferredMetricsTieBreakers>
 </document>

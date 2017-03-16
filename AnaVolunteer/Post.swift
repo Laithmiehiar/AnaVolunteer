@@ -7,23 +7,25 @@
 //
 
 import Foundation
-
+import Firebase
 class Post{
     private var _eventCaption: String!
     private var _time: String!
     private var _postedBy: String!
     private var _location: String!
     private var _category: String!
-    private var _likes: Int!
+    private var _likesfromFavButton: Int!
     private var _postKey: String!
     private var _imageUrl: String!
-    init(eventCaption: String, time: String, postedBy: String, location: String, category: String,likes:Int,imageUrl: String) {
+    private var _postRef: FIRDatabaseReference!
+    
+    init(eventCaption: String, time: String, postedBy: String, location: String, category: String,likesfromFavButton:Int,imageUrl: String) {
         self._eventCaption = eventCaption
         self._time = time
         self._postedBy = postedBy
         self._location = location
         self._category = category
-        self._likes = likes
+        self._likesfromFavButton = likesfromFavButton
         self._imageUrl = imageUrl
     }
     
@@ -45,15 +47,28 @@ class Post{
         if let category = postData["category"] as? String{
             self._category = category
         }
-        if let likes = postData["likes"] as? Int{
-            self._likes = likes
+        if let likesfromFavButton = postData["likes"] as? Int{
+            self._likesfromFavButton = likesfromFavButton
         }
         if let imageUrl = postData["imageUrl"] as? String{
             self._imageUrl = imageUrl
         }
-       
+        
+        _postRef = DataService.ds.REF_POSTS.child(_postKey)
         
     }
+    
+    
+    func adjustLikes(addLike: Bool){
+        if addLike{
+            _likesfromFavButton = _likesfromFavButton + 1
+        }else{
+            _likesfromFavButton = likesfromFavButton - 1
+        }
+        _postRef.child("likes").setValue(_likesfromFavButton)
+    }
+    
+    
     var eventCaption: String{
         return _eventCaption
     }
@@ -74,8 +89,8 @@ class Post{
         return _category
     }
     
-    var likes: Int{
-        return _likes
+    var likesfromFavButton: Int{
+        return _likesfromFavButton
     }
     
     var postKey: String{
