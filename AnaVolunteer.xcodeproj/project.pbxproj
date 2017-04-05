@@ -21,6 +21,7 @@
 		AC07DEF41E6376A0000BD40F /* Existence-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = AC07DEF11E6376A0000BD40F /* Existence-Light.otf */; };
 		AC07DEF51E6376A0000BD40F /* Existence-StencilLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = AC07DEF21E6376A0000BD40F /* Existence-StencilLight.otf */; };
 		AC07DEF61E6376A0000BD40F /* Existence-UnicaseLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = AC07DEF31E6376A0000BD40F /* Existence-UnicaseLight.otf */; };
+		AC0D0FDD1E8E1888006121CD /* UserProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0D0FDC1E8E1888006121CD /* UserProfileVC.swift */; };
 		AC16AEC61E63F10700693E1C /* DismissKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16AEC51E63F10700693E1C /* DismissKeyboard.swift */; };
 		AC16AEC81E63F58300693E1C /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16AEC71E63F58300693E1C /* PostCell.swift */; };
 		AC16AECC1E64016D00693E1C /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16AECB1E64016D00693E1C /* CircleImageView.swift */; };
@@ -43,6 +44,7 @@
 		AC266AD01E6203F60009B6E3 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC266ACF1E6203F60009B6E3 /* SignupVC.swift */; };
 		AC266AD21E6225120009B6E3 /* CustomeTextFieldWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC266AD11E6225120009B6E3 /* CustomeTextFieldWithIcon.swift */; };
 		AC266AD51E6266CE0009B6E3 /* HomePageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC266AD41E6266CE0009B6E3 /* HomePageVC.swift */; };
+		AC3B62A11E947CE900790758 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3B62A01E947CE900790758 /* UIColor.swift */; };
 		AC7268321E694D4E00C6A8EA /* ShareAnEventVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7268311E694D4E00C6A8EA /* ShareAnEventVC.swift */; };
 		AC7268361E6BEDAF00C6A8EA /* EventDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7268351E6BEDAF00C6A8EA /* EventDetailsVC.swift */; };
 		AC8C9E521E64AB330040838C /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8C9E511E64AB330040838C /* RoundButton.swift */; };
@@ -67,6 +69,7 @@
 		AC07DEF11E6376A0000BD40F /* Existence-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Existence-Light.otf"; sourceTree = "<group>"; };
 		AC07DEF21E6376A0000BD40F /* Existence-StencilLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Existence-StencilLight.otf"; sourceTree = "<group>"; };
 		AC07DEF31E6376A0000BD40F /* Existence-UnicaseLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Existence-UnicaseLight.otf"; sourceTree = "<group>"; };
+		AC0D0FDC1E8E1888006121CD /* UserProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileVC.swift; sourceTree = "<group>"; };
 		AC16AEC51E63F10700693E1C /* DismissKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissKeyboard.swift; sourceTree = "<group>"; };
 		AC16AEC71E63F58300693E1C /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		AC16AECB1E64016D00693E1C /* CircleImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
@@ -92,6 +95,7 @@
 		AC266AD11E6225120009B6E3 /* CustomeTextFieldWithIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomeTextFieldWithIcon.swift; sourceTree = "<group>"; };
 		AC266AD31E6244A40009B6E3 /* AnaVolunteer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AnaVolunteer.entitlements; sourceTree = "<group>"; };
 		AC266AD41E6266CE0009B6E3 /* HomePageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageVC.swift; sourceTree = "<group>"; };
+		AC3B62A01E947CE900790758 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		AC7268311E694D4E00C6A8EA /* ShareAnEventVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareAnEventVC.swift; sourceTree = "<group>"; };
 		AC7268351E6BEDAF00C6A8EA /* EventDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailsVC.swift; sourceTree = "<group>"; };
 		AC8C9E511E64AB330040838C /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
@@ -206,6 +210,7 @@
 				AC266AD41E6266CE0009B6E3 /* HomePageVC.swift */,
 				AC7268311E694D4E00C6A8EA /* ShareAnEventVC.swift */,
 				AC7268351E6BEDAF00C6A8EA /* EventDetailsVC.swift */,
+				AC0D0FDC1E8E1888006121CD /* UserProfileVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -213,6 +218,7 @@
 		AC266AB81E61103E0009B6E3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AC3B62A01E947CE900790758 /* UIColor.swift */,
 				AC266ACD1E61FDAC0009B6E3 /* CustomTextField.swift */,
 				AC266AC91E6153920009B6E3 /* FancyView.swift */,
 				AC266ACB1E6155670009B6E3 /* FancyButton.swift */,
@@ -287,6 +293,7 @@
 					AC266A9B1E60FA340009B6E3 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = R95548KD4W;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -404,7 +411,9 @@
 				AC07DEE01E6365A3000BD40F /* MaterialView.swift in Sources */,
 				AC266AD21E6225120009B6E3 /* CustomeTextFieldWithIcon.swift in Sources */,
 				AC266ACC1E6155670009B6E3 /* FancyButton.swift in Sources */,
+				AC3B62A11E947CE900790758 /* UIColor.swift in Sources */,
 				AC07DEDC1E6295AE000BD40F /* CustomTabBarController.swift in Sources */,
+				AC0D0FDD1E8E1888006121CD /* UserProfileVC.swift in Sources */,
 				AC16AEC81E63F58300693E1C /* PostCell.swift in Sources */,
 				AC266AA21E60FA340009B6E3 /* LoginVC.swift in Sources */,
 				AC266ACA1E6153920009B6E3 /* FancyView.swift in Sources */,
@@ -540,12 +549,15 @@
 			baseConfigurationReference = 3FFBBE6437791354A3009D70 /* Pods-AnaVolunteer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = AnaVolunteer/AnaVolunteer.entitlements;
 				DEVELOPMENT_TEAM = R95548KD4W;
 				INFOPLIST_FILE = AnaVolunteer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mihyar.AnaVolunteer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -555,12 +567,14 @@
 			baseConfigurationReference = 4757BD8A77F604AA472BFBD9 /* Pods-AnaVolunteer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = AnaVolunteer/AnaVolunteer.entitlements;
 				DEVELOPMENT_TEAM = R95548KD4W;
 				INFOPLIST_FILE = AnaVolunteer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mihyar.AnaVolunteer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

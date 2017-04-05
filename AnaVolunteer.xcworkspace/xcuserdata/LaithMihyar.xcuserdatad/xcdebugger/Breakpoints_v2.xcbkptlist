@@ -25,54 +25,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "AnaVolunteer/PostCell.swift"
-            timestampString = "511067865.941365"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "configureCell(post:img:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AnaVolunteer/HomePageVC.swift"
-            timestampString = "511077257.324073"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AnaVolunteer/HomePageVC.swift"
-            timestampString = "511080653.930903"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "viewWillAppear(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "AnaVolunteer/Post.swift"
             timestampString = "511074988.505507"
             startingColumnNumber = "9223372036854775807"
@@ -80,22 +32,6 @@
             startingLineNumber = "63"
             endingLineNumber = "63"
             landmarkName = "adjustLikes(addLike:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AnaVolunteer/HomePageVC.swift"
-            timestampString = "511077828.682359"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "loadData()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -111,74 +47,8 @@
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "function signature specialization &lt;preserving fragile attribute, Arg[1] = Exploded&gt; of generic specialization &lt;preserving fragile attribute, Swift.UnsafeMutableBufferPointer&lt;Swift.Int64&gt; with Swift.UnsafeMutableBufferPointer&lt;Swift.Int64&gt; : Swift.MutableCollection in Swift and Swift.UnsafeMutableBufferPointer&lt;Swift.Int64&gt; : Swift.RandomAccessCollection in Swift&gt; of Swift._introSortImpl &lt;A where A: Swift.MutableCollection, A: Swift.RandomAccessCollection&gt; (inout A, subRange : Swift.Range&lt;A.Index&gt;, by : inout (A.Iterator.Element, A.Iterator.Element) -&gt; Swift.Bool, depthLimit : Swift.Int) -&gt; ()"
-                  moduleName = "libswiftSwiftOnoneSupport.dylib"
                   usesParentBreakpointCondition = "Yes"
-                  offsetFromSymbolStart = "292">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AnaVolunteer/HomePageVC.swift"
-            timestampString = "511075875.918566"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AnaVolunteer/HomePageVC.swift"
-            timestampString = "511077868.293368"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "loadData()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "AnaVolunteer.HomePageVC.(loadData () -&gt; ()).(closure #1)"
-                  moduleName = "AnaVolunteer"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/LaithMihyar/Documents/xCode%20Workspace/AnaVolunteer/AnaVolunteer/HomePageVC.swift"
-                  timestampString = "511077871.559349"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
-                  offsetFromSymbolStart = "784">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "AnaVolunteer.HomePageVC.(loadData () -&gt; ()).(closure #1)"
-                  moduleName = "AnaVolunteer"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/LaithMihyar/Documents/xCode%20Workspace/AnaVolunteer/AnaVolunteer/HomePageVC.swift"
-                  timestampString = "511077871.562631"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
-                  offsetFromSymbolStart = "1372">
+                  offsetFromSymbolStart = "0">
                </Location>
             </Locations>
          </BreakpointContent>

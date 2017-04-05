@@ -29,6 +29,9 @@ class HomePageVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         //loadData
         loadData()
         
+        //dismiss the Elissa popUp
+        let gesture = UITapGestureRecognizer(target: self, action:  #selector (self.touchBegin (_:)))
+        self.view.addGestureRecognizer(gesture)
     }
     
     func loadData(){
@@ -95,15 +98,7 @@ class HomePageVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
         
     }
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
+
     func someActionTrigger() {
         
         let elissaConfig = ElissaConfiguration()
@@ -121,6 +116,9 @@ class HomePageVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBAction func goToEventDetails(_ sender: Any) {
         performSegue(withIdentifier: "goToEventDetail", sender: nil)
     }
-    
+  
+    func touchBegin(_ sender:UITapGestureRecognizer){
+        Elissa.dismiss()
+    }
 }
 

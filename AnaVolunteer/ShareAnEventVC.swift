@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import UITextField_Shake
 //import DataService
-class ShareAnEventVC: UIViewController , UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ShareAnEventVC: UIViewController , UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     
     @IBOutlet weak var scollview: UIScrollView!
     @IBOutlet weak var eventImage: CircleImageView!
@@ -34,6 +34,11 @@ class ShareAnEventVC: UIViewController , UIImagePickerControllerDelegate, UINavi
     var imagePicker : UIImagePickerController!
     var eventImageURL: String = ""
     var imageSelected: Bool = false
+    var volunteerIsNeeded: Bool = false
+    var shareProfile: Bool = false
+    var eventTypes = [String]()
+    var selectedCategory: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //hide the keyboard whereever tapped around
@@ -45,6 +50,11 @@ class ShareAnEventVC: UIViewController , UIImagePickerControllerDelegate, UINavi
         imagePicker.delegate = self
         
         
+        //UIPicker view
+        self.eventCategory.dataSource = self
+        self.eventCategory.delegate = self
+        //get Events Categories
+        getEventTypes()
     }
     
     override func viewDidLayoutSubviews() {
@@ -107,35 +117,36 @@ class ShareAnEventVC: UIViewController , UIImagePickerControllerDelegate, UINavi
             
         }else{
             print("SignupVC: No Image Selected")
+            alertDialogPopup(alertTitle: "Warning", alertMessage: "No Image Selected", buttonTitle: "Ok")
             return
         }
-
+        
     }
     
     func postToFirebase(imageURL: String, eventTime: String, eventDate: String){
         let post: Dictionary<String,Any> = [
-            "eventImage":imageURL,
-            "eventName": eventName.text!,
-            "eventDescription": eventDescription.text ?? "No Desctription",
-            "eventTime": eventTime,
-            "eventDate":eventDate,
-            "eventAddress": eventAddress.text,
-            "eventFees": eventFees.text,
-            "eventCategory": eventCategory,
-            "eventAudience": eventAudience.text,
-            "eventAudienceRegistrationLink": eventAudienceRegistrationLink.text,
-            "eventVolunteersIsNeeded": eventVolunteersIfNeeded,
-            "eventVolunteersRegistrationLink": eventVolunteersRegistrationLink,
-            "eventFacebookPage": eventFacebookPage,
-            "eventTwitterPage": eventTwitterPage,
-            "eventInstagramPage": eventInstagramPage,
-            "eventSnapchatUserName": eventSnapchatId,
-            "sharingHostedProfile": sharingHostedProfile]
+            "eventImage": imageURL,
+//            "eventName": eventName.text ?? "",
+//            "eventDescription": eventDescription.text ?? "No Desctription",
+//            "eventTime": eventTime,
+//            "eventDate":eventDate,
+//            "eventAddress": eventAddress.text ?? "default",
+//            "eventFees": eventFees.text ?? "default",
+//            "eventCategory":  self.selectedCategory,
+//            "eventAudience": eventAudience.text ?? "Public",
+//            "eventAudienceRegistrationLink": eventAudienceRegistrationLink.text ?? "Not Specified",
+//            "eventVolunteersIsNeeded": self.volunteerIsNeeded,
+//            "eventVolunteersRegistrationLink": eventVolunteersRegistrationLink.text ?? "Not Specified",
+//            "eventFacebookPage": eventFacebookPage.text ?? "Not Specified",
+//           "eventTwitterPage": eventTwitterPage.text ?? "Not Specified",
+//            "eventInstagramPage": eventInstagramPage.text ?? "Not Specified",
+//            "eventSnapchatUserName": eventSnapchatId.text ?? "Not Specified",
+//             "sharingHostedProfile": self.shareProfile,
+        ]
         
-            let firebasePost = DataService.ds.REF_POSTS.childByAutoId()
-            firebasePost.setValue(post)
+        let firebasePost = DataService.ds.REF_POSTS.childByAutoId()
+        firebasePost.setValue(post)
         
-                
         
     }
     
@@ -145,6 +156,73 @@ class ShareAnEventVC: UIViewController , UIImagePickerControllerDelegate, UINavi
         self.present(alert, animated: true, completion: nil)
     }
     
+    @IBAction func volunteerNeeded(_ sender: Any) {
+        switch eventVolunteersIfNeeded.selectedSegmentIndex
+        {
+        case 0:
+            volunteerIsNeeded = false;
+        case 1:
+            volunteerIsNeeded = true;
+        default:
+            break;
+        }
+    }
+    
+    @IBAction func shareProfileSeg(_ sender: Any) {
+        switch sharingHostedProfile.selectedSegmentIndex
+        {
+        case 0:
+            shareProfile = false;
+        case 1:
+            shareProfile = true;
+        default:
+            break;
+        }
+    }
+    
+    func getEventTypes(){
+        self.eventTypes.removeAll()
+        DataService.ds.REF_CATEGORIES.observe(.value, with: { (snapshot) in
+            if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot]{
+                for snap in snapshot{
+                    print ("SNAP: \(snap)")
+                    if (snap.value as? String) != nil{
+                        let key = snap.key
+                        let value = snap.value
+                        if !(self.eventTypes.contains(key)){
+                            self.eventTypes.append(value as! String)
+                            
+                        }
+                    }
+                }
+            }
+            self.eventCategory.reloadAllComponents()
+        })
+        
+    }
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return eventTypes.count
+    }
+    
+    
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        
+        let pickerLabel = UILabel()
+        pickerLabel.textColor = UIColor.black
+        pickerLabel.text = eventTypes[row]
+        // pickerLabel.font = UIFont(name: pickerLabel.font.fontName, size: 15)
+        pickerLabel.font = UIFont(name: "Arial-BoldMT", size: 12) // In this use your custom font
+        pickerLabel.textAlignment = NSTextAlignment.center
+        return pickerLabel
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        self.selectedCategory = eventTypes[row]
+    }
     
     /*
      // MARK: - Navigation
