@@ -25,7 +25,7 @@ class HomePageVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         self.hideKeyboardWhenTappedAround()
         tableView.delegate = self
         tableView.dataSource = self
-        someActionTrigger()
+        elissaTrigger()
         //loadData
         loadData()
         
@@ -99,7 +99,7 @@ class HomePageVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
     }
 
-    func someActionTrigger() {
+    func elissaTrigger() {
         
         let elissaConfig = ElissaConfiguration()
         elissaConfig.message = "Share An Event"

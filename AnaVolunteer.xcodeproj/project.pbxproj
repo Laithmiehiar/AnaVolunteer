@@ -50,6 +50,7 @@
 		AC8C9E521E64AB330040838C /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8C9E511E64AB330040838C /* RoundButton.swift */; };
 		AC8C9E551E6535300040838C /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8C9E541E6535300040838C /* DataService.swift */; };
 		AC8C9E571E666D950040838C /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8C9E561E666D930040838C /* Post.swift */; };
+		AC9F633D1E95F6F80087D34D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9F633C1E95F6F80087D34D /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,6 +102,7 @@
 		AC8C9E511E64AB330040838C /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		AC8C9E541E6535300040838C /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		AC8C9E561E666D930040838C /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		AC9F633C1E95F6F80087D34D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				AC8C9E561E666D930040838C /* Post.swift */,
+				AC9F633C1E95F6F80087D34D /* User.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -426,6 +429,7 @@
 				AC8C9E571E666D950040838C /* Post.swift in Sources */,
 				AC266AC81E6152F60009B6E3 /* Constant.swift in Sources */,
 				AC8C9E551E6535300040838C /* DataService.swift in Sources */,
+				AC9F633D1E95F6F80087D34D /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

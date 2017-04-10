@@ -124,24 +124,25 @@ class ShareAnEventVC: UIViewController , UIImagePickerControllerDelegate, UINavi
     }
     
     func postToFirebase(imageURL: String, eventTime: String, eventDate: String){
+
         let post: Dictionary<String,Any> = [
             "eventImage": imageURL,
-//            "eventName": eventName.text ?? "",
-//            "eventDescription": eventDescription.text ?? "No Desctription",
-//            "eventTime": eventTime,
-//            "eventDate":eventDate,
-//            "eventAddress": eventAddress.text ?? "default",
-//            "eventFees": eventFees.text ?? "default",
-//            "eventCategory":  self.selectedCategory,
-//            "eventAudience": eventAudience.text ?? "Public",
-//            "eventAudienceRegistrationLink": eventAudienceRegistrationLink.text ?? "Not Specified",
-//            "eventVolunteersIsNeeded": self.volunteerIsNeeded,
-//            "eventVolunteersRegistrationLink": eventVolunteersRegistrationLink.text ?? "Not Specified",
-//            "eventFacebookPage": eventFacebookPage.text ?? "Not Specified",
-//           "eventTwitterPage": eventTwitterPage.text ?? "Not Specified",
-//            "eventInstagramPage": eventInstagramPage.text ?? "Not Specified",
-//            "eventSnapchatUserName": eventSnapchatId.text ?? "Not Specified",
-//             "sharingHostedProfile": self.shareProfile,
+            "eventName": self.eventName ?? "",
+            "eventDescription": eventDescription.text,
+            "eventTime": eventTime,
+            "eventDate": eventDate,
+            "eventAddress": eventAddress.text ?? "",
+            "eventFees": eventFees.text ?? "",
+            "eventCategory":  selectedCategory,
+            "eventAudience":  eventAudience.text ?? "",
+            "eventAudienceRegistrationLink": eventAudienceRegistrationLink.text ?? "",
+            "eventVolunteersIsNeeded": volunteerIsNeeded,
+            "eventVolunteersRegistrationLink": eventVolunteersRegistrationLink.text ?? "",
+//            "eventFacebookPage": eventFacebookPage.text,
+            //"eventTwitterPage": eventTwitterPage.text,
+//            "eventInstagramPage": eventInstagramPage.text,
+//            "eventSnapchatUserName": eventSnapchatId.text,
+             "sharingHostedProfile": self.shareProfile,
         ]
         
         let firebasePost = DataService.ds.REF_POSTS.childByAutoId()

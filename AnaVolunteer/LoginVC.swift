@@ -19,7 +19,6 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
-
         
     }
     
@@ -86,7 +85,7 @@ class LoginVC: UIViewController {
             else{
                 print("LoginVC: Successfully authenticated with Firebase")
                 if let user = user{
-                    let userData = ["provider:": credential.provider]
+                    let userData = ["provider": credential.provider]
                     self.completeSignin(userId: user.uid,userData: userData)
                 }
             }
@@ -100,7 +99,7 @@ class LoginVC: UIViewController {
                 if error == nil{
                     print("LoginVC: Email user authenticated with Firebase")
                     if let user = user{
-                        let userData = ["provider:": user.providerID]
+                        let userData = ["provider": user.providerID]
                         self.completeSignin(userId: user.uid,userData: userData)
                     }
                 }
