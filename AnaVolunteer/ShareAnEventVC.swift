@@ -124,31 +124,36 @@ class ShareAnEventVC: UIViewController , UIImagePickerControllerDelegate, UINavi
     }
     
     func postToFirebase(imageURL: String, eventTime: String, eventDate: String){
+        var post: Dictionary<String,Any>= [:];
+        do {
+            post.updateValue(imageURL, forKey: "eventImage")
+            post.updateValue(eventName.text!, forKey: "eventCaption")
+            post.updateValue(eventDescription.text, forKey: "eventDescription")
+            post.updateValue(eventTime, forKey: "eventTime")
+            post.updateValue(eventDate, forKey: "eventDate")
+            post.updateValue(eventAddress.text ?? "Not Provided", forKey: "eventAddress")
+            post.updateValue(eventFees.text ?? "Not Provided", forKey: "eventFees")
+            post.updateValue(selectedCategory, forKey: "eventCategory")
+            post.updateValue(eventAudience.text ?? "Public,", forKey: "eventAudience")
+            post.updateValue(eventAudienceRegistrationLink.text ?? "Not Provided", forKey: "eventAudienceRegistrationLink")
+            post.updateValue(volunteerIsNeeded, forKey: "eventVolunteersIsNeeded")
+            post.updateValue(eventVolunteersRegistrationLink.text ?? "Not Provided", forKey: "eventVolunteersRegistrationLink")
+            post.updateValue(eventFacebookPage.text ?? "Not Provided", forKey: "eventFacebookPage")
+            post.updateValue(eventTwitterPage.text ?? "Not Provided", forKey: "eventTwitterPage")
+            post.updateValue(eventInstagramPage.text ?? "Not Provided", forKey: "eventInstagramPage")
+            post.updateValue( eventSnapchatId.text ?? "Not Provided", forKey: "eventSnapchatUserName")
+            post.updateValue(self.shareProfile, forKey: "sharingHostedProfile")
 
-        let post: Dictionary<String,Any> = [
-            "eventImage": imageURL,
-            "eventName": self.eventName ?? "",
-            "eventDescription": eventDescription.text,
-            "eventTime": eventTime,
-            "eventDate": eventDate,
-            "eventAddress": eventAddress.text ?? "",
-            "eventFees": eventFees.text ?? "",
-            "eventCategory":  selectedCategory,
-            "eventAudience":  eventAudience.text ?? "",
-            "eventAudienceRegistrationLink": eventAudienceRegistrationLink.text ?? "",
-            "eventVolunteersIsNeeded": volunteerIsNeeded,
-            "eventVolunteersRegistrationLink": eventVolunteersRegistrationLink.text ?? "",
-//            "eventFacebookPage": eventFacebookPage.text,
-            //"eventTwitterPage": eventTwitterPage.text,
-//            "eventInstagramPage": eventInstagramPage.text,
-//            "eventSnapchatUserName": eventSnapchatId.text,
-             "sharingHostedProfile": self.shareProfile,
-        ]
+            
+        }catch let error as NSError {
+            print(error)
+        }
+       
         
         let firebasePost = DataService.ds.REF_POSTS.childByAutoId()
         firebasePost.setValue(post)
         
-        
+        performSegue(withIdentifier: "showHome", sender: nil)
     }
     
     func alertDialogPopup(alertTitle: String, alertMessage: String, buttonTitle: String){

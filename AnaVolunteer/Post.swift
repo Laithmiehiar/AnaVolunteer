@@ -9,6 +9,31 @@
 import Foundation
 import Firebase
 class Post{
+    /*
+     private var _eventCaption: String!
+     private var _eventAddress: String!
+     private var _eventAudience: String!
+     private var _eventAudienceRegistrationLink: String!
+     private var _eventCategory: String!
+     private var _eventDescription: String!
+     private var _eventFacebookPage: String!
+     private var _eventFees: String!
+     private var _eventInstagramPage: String!
+     private var _eventSnapchatUserName: String!
+     private var _eventTime: String!
+     private var _eventTwitterPage: String!
+     private var _eventVolunteersIsNeeded: String!
+     private var _eventVolunteersRegistrationLink: String!
+     private var _sharingHostedProfile: String!
+     private var _eventDate: String!
+     
+     private var _category: String!
+     private var _likesfromFavButton: Int!
+     private var _postKey: String!
+     private var _eventImage: String!
+     private var _postRef: FIRDatabaseReference!
+     
+*/
     private var _eventCaption: String!
     private var _time: String!
     private var _postedBy: String!

@@ -93,7 +93,7 @@ class UserProfileVC: UIViewController , UIPopoverPresentationControllerDelegate,
             if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot]{
                 for snap in snapshot{
                     print ("SNAP: \(snap)")
-                    if snap.value != nil{
+                    if snap.value != nil && snap.value as! String != ""{
                         let key = snap.key
                         switch key{
                         case "email":
