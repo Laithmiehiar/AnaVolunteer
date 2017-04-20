@@ -85,7 +85,7 @@ class HomePageVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as? PostCell{
             
-            if let img = HomePageVC.imageCache.object(forKey: post.imageUrl as NSString){
+            if let img = HomePageVC.imageCache.object(forKey: post.eventImage as NSString){
                 //configure your cell
                 cell.configureCell(post: post, img: img)
             }else {

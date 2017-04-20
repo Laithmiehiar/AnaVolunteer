@@ -508,8 +508,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4zS-Cc-xim">
                                 <rect key="frame" x="0.0" y="64" width="375" height="1256"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eventbkg" translatesAutoresizingMaskIntoConstraints="NO" id="Hj0-f0-a7W">
-                                        <rect key="frame" x="0.0" y="-41" width="375" height="266"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="eventbkg" translatesAutoresizingMaskIntoConstraints="NO" id="Hj0-f0-a7W">
+                                        <rect key="frame" x="0.0" y="-17" width="375" height="242"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="266" id="ZO3-kv-Bpb"/>
                                         </constraints>
@@ -2130,7 +2130,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1tS-wU-fLy" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" tag="-1" contentMode="scaleToFill" misplaced="YES" id="kXT-IX-ZyM">
+                    <navigationBar key="navigationBar" tag="-1" contentMode="scaleToFill" id="kXT-IX-ZyM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

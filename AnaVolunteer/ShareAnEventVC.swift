@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import UITextField_Shake
+import SwiftKeychainWrapper
 //import DataService
 class ShareAnEventVC: UIViewController , UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     
@@ -142,7 +143,9 @@ class ShareAnEventVC: UIViewController , UIImagePickerControllerDelegate, UINavi
             post.updateValue(eventTwitterPage.text ?? "Not Provided", forKey: "eventTwitterPage")
             post.updateValue(eventInstagramPage.text ?? "Not Provided", forKey: "eventInstagramPage")
             post.updateValue( eventSnapchatId.text ?? "Not Provided", forKey: "eventSnapchatUserName")
-            post.updateValue(self.shareProfile, forKey: "sharingHostedProfile")
+            post.updateValue( 0, forKey: "likes")
+            post.updateValue( eventSnapchatId.text ?? "Not Provided", forKey: "eventSnapchatUserName")
+            post.updateValue(KeychainWrapper.standard.string(forKey: KEY_ID) ?? 0, forKey: "postedBy")
 
             
         }catch let error as NSError {
@@ -152,6 +155,7 @@ class ShareAnEventVC: UIViewController , UIImagePickerControllerDelegate, UINavi
         
         let firebasePost = DataService.ds.REF_POSTS.childByAutoId()
         firebasePost.setValue(post)
+        
         
         performSegue(withIdentifier: "showHome", sender: nil)
     }

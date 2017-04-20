@@ -20,7 +20,8 @@ class PostCell: UITableViewCell {
     
     var post: Post!
     var favsRef: FIRDatabaseReference!
-    
+    var userPost: FIRDatabaseReference!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -36,18 +37,25 @@ class PostCell: UITableViewCell {
     func configureCell(post: Post, img: UIImage? = nil){
         self.post = post
         favsRef = DataService.ds.REF_USER_CURRENT.child("likes").child(post.postKey)
-        
+        userPost = DataService.ds.REF_USERS.child(post.postedBy)
         self.eventName.text = post.eventCaption
-        self.timeEvent.text = post.time
-        self.location.text = post.location
+        self.timeEvent.text = post.eventTime
+        self.location.text = post.eventAddress
         self.likesNo.text = ("\(post.likesfromFavButton)")
-        self.postedBy.text = post.postedBy
-        self.category.setTitle(post.category, for: .normal)
+
+        userPost.observeSingleEvent(of: .value, with:{ (snapshot: FIRDataSnapshot) in
+            let value = snapshot.value as? NSDictionary
+                let firstName = value?.value(forKey: "firstName")
+                let lastName = value?.value(forKey: "lastName")
+            self.postedBy.text = "\(firstName!) \(lastName)"
+
+        })
+        self.category.setTitle(post.eventCategory, for: .normal)
         
         if img != nil{
             self.postImg.image = img
         }else{
-            let ref = FIRStorage.storage().reference(forURL: post.imageUrl)
+            let ref = FIRStorage.storage().reference(forURL: post.eventImage)
             ref.data(withMaxSize: 15 * 1024 * 1024, completion: {(data,error) in
                 if error != nil {
                     print("PostCell: Unable to download image from Firebase Storage \(error)")
@@ -56,7 +64,7 @@ class PostCell: UITableViewCell {
                     if let imgData = data{
                         if let img = UIImage(data: imgData){
                             self.postImg.image = img
-                            HomePageVC.imageCache.setObject(img, forKey: post.imageUrl as NSString)
+                            HomePageVC.imageCache.setObject(img, forKey: post.eventImage as NSString)
                             
                         }
                     }
