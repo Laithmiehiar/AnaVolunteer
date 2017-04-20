@@ -47,7 +47,7 @@ class PostCell: UITableViewCell {
             let value = snapshot.value as? NSDictionary
                 let firstName = value?.value(forKey: "firstName")
                 let lastName = value?.value(forKey: "lastName")
-            self.postedBy.text = "\(firstName!) \(lastName)"
+            self.postedBy.text = "\(firstName!) \(lastName!)"
 
         })
         self.category.setTitle(post.eventCategory, for: .normal)

@@ -118,8 +118,8 @@ class SignupVC: UIViewController , UIImagePickerControllerDelegate, UINavigation
                }else{
                     print("SignupVC: Successfully authenticated email with Firebase")
                     let userData: Dictionary<String,String> = ["provider:": user!.providerID,
-                                                               "first_name": (self.fname?.text)!,
-                                                               "last_name": (self.lname?.text)!,
+                                                               "firstName": (self.fname?.text)!,
+                                                               "lastName": (self.lname?.text)!,
                                                                "email": mail,
                                                                "password":pwd,
                                                                "profileImage": self.profileImageURL]

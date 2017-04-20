@@ -23,9 +23,9 @@ class EventDetailsVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         // Show the navigation bar on other view controllers
-        //self.navigationController?.setNavigationBarHidden(false, animated: animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
         //remove "back" from the cursor side in the navigation bar
-      //  self.navigationController?.navigationBar.backItem?.title=""
+//        self.navigationController?.navigationBar.backItem?.title="Back"
     }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()

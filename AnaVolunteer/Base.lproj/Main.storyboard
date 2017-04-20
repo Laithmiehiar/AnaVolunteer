@@ -508,10 +508,10 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4zS-Cc-xim">
                                 <rect key="frame" x="0.0" y="64" width="375" height="1256"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="eventbkg" translatesAutoresizingMaskIntoConstraints="NO" id="Hj0-f0-a7W">
+                                    <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eventbkg" translatesAutoresizingMaskIntoConstraints="NO" id="Hj0-f0-a7W">
                                         <rect key="frame" x="0.0" y="-17" width="375" height="242"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="266" id="ZO3-kv-Bpb"/>
+                                            <constraint firstAttribute="height" constant="242" id="ZO3-kv-Bpb"/>
                                         </constraints>
                                     </imageView>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fXa-mw-pQK">
@@ -881,7 +881,7 @@
                                     <constraint firstItem="Hj0-f0-a7W" firstAttribute="leading" secondItem="4zS-Cc-xim" secondAttribute="leading" id="3jA-Wg-Zm1"/>
                                     <constraint firstAttribute="trailing" secondItem="Hj0-f0-a7W" secondAttribute="trailing" id="6gN-GM-X9d"/>
                                     <constraint firstAttribute="trailing" secondItem="fXa-mw-pQK" secondAttribute="trailing" id="KPE-92-uPJ"/>
-                                    <constraint firstItem="Hj0-f0-a7W" firstAttribute="top" secondItem="4zS-Cc-xim" secondAttribute="top" constant="-41" id="N1l-F5-cnQ"/>
+                                    <constraint firstItem="Hj0-f0-a7W" firstAttribute="top" secondItem="4zS-Cc-xim" secondAttribute="top" constant="-17" id="N1l-F5-cnQ"/>
                                     <constraint firstItem="Hj0-f0-a7W" firstAttribute="centerX" secondItem="4zS-Cc-xim" secondAttribute="centerX" id="OOL-qz-lOo"/>
                                     <constraint firstAttribute="bottom" secondItem="fXa-mw-pQK" secondAttribute="bottom" id="Pad-4l-W2W"/>
                                     <constraint firstItem="fXa-mw-pQK" firstAttribute="top" secondItem="Hj0-f0-a7W" secondAttribute="bottom" constant="1" id="SxN-EM-3c8"/>
@@ -2130,7 +2130,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1tS-wU-fLy" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" tag="-1" contentMode="scaleToFill" id="kXT-IX-ZyM">
+                    <navigationBar key="navigationBar" tag="-1" contentMode="scaleToFill" misplaced="YES" id="kXT-IX-ZyM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
