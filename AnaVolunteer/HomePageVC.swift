@@ -55,8 +55,10 @@ class HomePageVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        //remove "back" from the cursor side in the navigation bar
-        self.navigationController?.navigationBar.backItem?.title=""
+        // Show the navigation bar on other view controllers
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+//        //remove "back" from the cursor side in the navigation bar
+//        self.navigationController?.navigationBar.backItem?.title=""
     }
     
     

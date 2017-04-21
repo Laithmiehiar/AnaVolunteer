@@ -100,10 +100,10 @@ class UserProfileVC: UIViewController , UIPopoverPresentationControllerDelegate,
                             self.aboutTextView.text = snap.value as! String!
                             self.userData.email = snap.value as! String!
                             break
-                            case "first_name":
+                            case "firstName":
                                 self.userData.firstName = snap.value as! String!
                             break
-                        case "last_name":
+                        case "lastName":
                             self.userData.lastName = snap.value as! String!
                             
                             self.userNameLabel.text = "\(self.userData.firstName) \(self.userData.lastName)"

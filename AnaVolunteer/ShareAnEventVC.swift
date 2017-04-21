@@ -148,16 +148,19 @@ class ShareAnEventVC: UIViewController , UIImagePickerControllerDelegate, UINavi
             post.updateValue(KeychainWrapper.standard.string(forKey: KEY_ID) ?? 0, forKey: "postedBy")
 
             
-        }catch let error as NSError {
-            print(error)
         }
+//        catch let error as NSError {
+//            print(error)
+//        }
        
         
         let firebasePost = DataService.ds.REF_POSTS.childByAutoId()
         firebasePost.setValue(post)
         
         
-        performSegue(withIdentifier: "showHome", sender: nil)
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let destination = storyboard.instantiateViewController(withIdentifier: "HomePageVC") as! HomePageVC
+        navigationController?.pushViewController(destination, animated: true)
     }
     
     func alertDialogPopup(alertTitle: String, alertMessage: String, buttonTitle: String){
