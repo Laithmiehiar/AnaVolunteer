@@ -9,28 +9,34 @@
 import UIKit
 
 class EventDetailsVC: UIViewController {
-
+    
+    var postData = Post()
+    
+    @IBOutlet weak var scrollView: UIScrollView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        
+        print(postData)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    override func viewDidLayoutSubviews(){
+        super.viewDidLayoutSubviews()
+        scrollView.contentSize = CGSize(width: 320, height: 1320);
+
+        
+    }
     override func viewWillAppear(_ animated: Bool) {
         // Show the navigation bar on other view controllers
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
         //remove "back" from the cursor side in the navigation bar
 //        self.navigationController?.navigationBar.backItem?.title="Back"
     }
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        //        scollview.contentSize = CGSize(width: 320, height: 2000)
-    }
+
     /*
     // MARK: - Navigation
 

@@ -31,6 +31,7 @@ class HomePageVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         //dismiss the Elissa popUp
         let gesture = UITapGestureRecognizer(target: self, action:  #selector (self.touchBegin (_:)))
         self.view.addGestureRecognizer(gesture)
+            gesture.cancelsTouchesInView = false
     }
     
     func loadData(){
@@ -99,6 +100,27 @@ class HomePageVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
         
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        print("table view : \(indexPath.row)")
+        let storyboard = UIStoryboard.init(name: "Main", bundle: Bundle.main)
+        let destination = storyboard.instantiateViewController(withIdentifier: "EventDetailsVC") as! EventDetailsVC
+        destination.postData = posts[indexPath.row]
+        navigationController?.pushViewController(destination, animated: true)
+//        self.performSegue(withIdentifier:"goToEventDetail", sender: indexPath);
+        
+    }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        // Get the new view controller using segue.destinationViewController.
+//        // Pass the selected object to the new view controller.
+//        if (segue.identifier == "goToEventDetail"){
+//            let controller = segue.destination as! EventDetailsVC
+//            let row = (sender as! NSIndexPath).row; //we know that sender is an NSIndexPath here.
+//            let postObj = posts[row] 
+//            controller.postData = postObj
+//        }
+//    }
 
     func elissaTrigger() {
         
@@ -114,9 +136,9 @@ class HomePageVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
     }
     
-    @IBAction func goToEventDetails(_ sender: Any) {
-        performSegue(withIdentifier: "goToEventDetail", sender: nil)
-    }
+   // @IBAction func goToEventDetails(_ sender: Any) {
+ //       performSegue(withIdentifier: "goToEventDetail", sender: nil)
+    //}
   
     func touchBegin(_ sender:UITapGestureRecognizer){
         Elissa.dismiss()

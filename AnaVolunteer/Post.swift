@@ -33,7 +33,9 @@ class Post{
     private var _postRef: FIRDatabaseReference!
     
     
+    init() {
     
+    }
     
     init(eventCaption: String, eventAddress: String,eventAudience: String, eventAudienceRegistrationLink: String,
          eventCategory: String,eventDescription: String,eventFacebookPage: String,eventFees: String, eventInstagramPage: String, eventSnapchatUserName: String, eventTime: String, eventTwitterPage: String, eventVolunteersIsNeeded: String,eventVolunteersRegistrationLink: String, sharingHostedProfile: String,  eventDate: String,eventImage: String,postedBy: String,location: String,likesfromFavButton:Int) {
