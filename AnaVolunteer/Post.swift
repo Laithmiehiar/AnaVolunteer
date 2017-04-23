@@ -22,7 +22,7 @@ class Post{
     private var _eventSnapchatUserName: String!
     private var _eventTime: String!
     private var _eventTwitterPage: String!
-    private var _eventVolunteersIsNeeded: String!
+    private var _eventVolunteersIsNeeded: Bool!
     private var _eventVolunteersRegistrationLink: String!
     private var _sharingHostedProfile: String!
     private var _eventDate: String!
@@ -38,7 +38,7 @@ class Post{
     }
     
     init(eventCaption: String, eventAddress: String,eventAudience: String, eventAudienceRegistrationLink: String,
-         eventCategory: String,eventDescription: String,eventFacebookPage: String,eventFees: String, eventInstagramPage: String, eventSnapchatUserName: String, eventTime: String, eventTwitterPage: String, eventVolunteersIsNeeded: String,eventVolunteersRegistrationLink: String, sharingHostedProfile: String,  eventDate: String,eventImage: String,postedBy: String,location: String,likesfromFavButton:Int) {
+         eventCategory: String,eventDescription: String,eventFacebookPage: String,eventFees: String, eventInstagramPage: String, eventSnapchatUserName: String, eventTime: String, eventTwitterPage: String, eventVolunteersIsNeeded: Bool,eventVolunteersRegistrationLink: String, sharingHostedProfile: String,  eventDate: String,eventImage: String,postedBy: String,location: String,likesfromFavButton:Int) {
         self._eventCaption = eventCaption
         self._eventAddress = eventAddress
         self._eventAudience = eventAudience
@@ -102,7 +102,7 @@ class Post{
         if let eventTwitterPage = postData["eventTwitterPage"] as? String{
             self._eventTwitterPage = eventTwitterPage
         }
-        if let eventVolunteersIsNeeded = postData["eventVolunteersIsNeeded"] as? String{
+        if let eventVolunteersIsNeeded = postData["eventVolunteersIsNeeded"] as? Bool{
             self._eventVolunteersIsNeeded = eventVolunteersIsNeeded
         }
         if let eventVolunteersRegistrationLink = postData["eventVolunteersRegistrationLink"] as? String{
@@ -177,7 +177,7 @@ class Post{
     var eventTwitterPage: String{
         return _eventTwitterPage
     }
-    var eventVolunteersIsNeeded: String{
+    var eventVolunteersIsNeeded: Bool{
         return _eventVolunteersIsNeeded
     }
     var eventVolunteersRegistrationLink: String{

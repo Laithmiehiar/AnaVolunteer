@@ -18,11 +18,14 @@ class UserProfileVC: UIViewController , UIPopoverPresentationControllerDelegate,
     @IBOutlet weak var aboutTextView: UILabel!
     @IBOutlet weak var userProfileImage: UIImageView!
     @IBOutlet weak var socialLink: UIImageView!
+    
+    
+    
     let picker = UIImageView(image: UIImage(named: "pickerbkg2"))
     var userData = User()
     
     static var imageCache: NSCache<NSString,UIImage> = NSCache()
-
+    
     
     struct properties {
         static let socialLinks = [
@@ -61,7 +64,7 @@ class UserProfileVC: UIViewController , UIPopoverPresentationControllerDelegate,
             alertDialogPopup(alertTitle: "Sorry!", alertMessage: "This user hasn't provided Phone Number", buttonTitle: "Ok")
         }
     }
- 
+    
     @IBAction func MessageTapped(_ sender: Any) {
         
         if MFMailComposeViewController.canSendMail(){
@@ -78,12 +81,12 @@ class UserProfileVC: UIViewController , UIPopoverPresentationControllerDelegate,
             
         }
     }
-
+    
     @IBAction func SocialTapped(_ sender: Any) {
-            print("socialtapped");
-            picker.isHidden ? openPicker() : closePicker()
+        print("socialtapped");
+        picker.isHidden ? openPicker() : closePicker()
     }
-
+    
     @IBOutlet var heartTapped: UITapGestureRecognizer!
     
     
@@ -93,64 +96,66 @@ class UserProfileVC: UIViewController , UIPopoverPresentationControllerDelegate,
             if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot]{
                 for snap in snapshot{
                     print ("SNAP: \(snap)")
-                    if snap.value != nil && snap.value as! String != ""{
-                        let key = snap.key
-                        switch key{
-                        case "email":
-                            self.aboutTextView.text = snap.value as! String!
-                            self.userData.email = snap.value as! String!
-                            break
+                    if(snap.key != "likes"){
+                        if snap.value != nil && snap.value as! String != ""{
+                            let key = snap.key
+                            switch key{
+                            case "email":
+                                self.aboutTextView.text = snap.value as! String!
+                                self.userData.email = snap.value as! String!
+                                break
                             case "firstName":
                                 self.userData.firstName = snap.value as! String!
-                            break
-                        case "lastName":
-                            self.userData.lastName = snap.value as! String!
-                            
-                            self.userNameLabel.text = "\(self.userData.firstName) \(self.userData.lastName)"
-                            break
-                        case "password":
-                            
-                            self.userData.password = snap.value as! String!
-                            break
-                        case "profileImage":
-                            
-                            self.userData.profileImage = snap.value as! String!
-                            
-                            if let img = UserProfileVC.imageCache.object(forKey: self.userData.profileImage as NSString){
-                                self.userProfileImage.image = img
-                            }else {
-                                let ref = FIRStorage.storage().reference(forURL: self.userData.profileImage)
-                                ref.data(withMaxSize: 15 * 1024 * 1024, completion: {(data,error) in
-                                    if error != nil {
-                                        print("UserProfileVC: Unable to download image from Firebase Storage \(error)")
-                                    }else{
-                                        print("UserProfileVC: Image downloaded from Firebase Storage")
-                                        if let imgData = data{
-                                            if let img = UIImage(data: imgData){
-                                                self.userProfileImage.image = img
-                                                UserProfileVC.imageCache.setObject(img, forKey: self.userData.profileImage as NSString)
-                                                
+                                break
+                            case "lastName":
+                                self.userData.lastName = snap.value as! String!
+                                
+                                self.userNameLabel.text = "\(self.userData.firstName) \(self.userData.lastName)"
+                                break
+                            case "password":
+                                
+                                self.userData.password = snap.value as! String!
+                                break
+                            case "profileImage":
+                                
+                                self.userData.profileImage = snap.value as! String!
+                                
+                                if let img = UserProfileVC.imageCache.object(forKey: self.userData.profileImage as NSString){
+                                    self.userProfileImage.image = img
+                                }else {
+                                    let ref = FIRStorage.storage().reference(forURL: self.userData.profileImage)
+                                    ref.data(withMaxSize: 15 * 1024 * 1024, completion: {(data,error) in
+                                        if error != nil {
+                                            print("UserProfileVC: Unable to download image from Firebase Storage \(error)")
+                                        }else{
+                                            print("UserProfileVC: Image downloaded from Firebase Storage")
+                                            if let imgData = data{
+                                                if let img = UIImage(data: imgData){
+                                                    self.userProfileImage.image = img
+                                                    UserProfileVC.imageCache.setObject(img, forKey: self.userData.profileImage as NSString)
+                                                    
+                                                }
                                             }
                                         }
-                                    }
-                                })
-
+                                    })
+                                    
+                                }
+                                
+                                break
+                            case "provider":
+                                
+                                self.userData.provider = snap.value as! String!
+                                break
+                            case "phoneNumber":
+                                
+                                self.userData.phoneNumber = snap.value as! String!
+                                break
+                            default:
+                                print("default")
+                                break
                             }
                             
-                                                        break
-                        case "provider":
-                            
-                            self.userData.provider = snap.value as! String!
-                            break
-                        case "phoneNumber":
-                            
-                            self.userData.phoneNumber = snap.value as! String!
-                            break
-                        default:
-                            print("default")
-                            break
                         }
-                        
                     }
                 }
             }
@@ -193,15 +198,15 @@ class UserProfileVC: UIViewController , UIPopoverPresentationControllerDelegate,
         switch sender.tag{
         case 0:
             if userData.facebookLink != ""{
-            let facebookHooks = "fb://profile/\(userData.facebookLink)"
-            let facebookUrl = NSURL(string: facebookHooks)
-            if UIApplication.shared.canOpenURL(facebookUrl! as URL)
-            {
-                UIApplication.shared.open(facebookUrl! as URL)
-                
-            } else {
-                //redirect to safari because the user doesn't have Instagram
-                UIApplication.shared.open(NSURL(string: "http://facebook.com/\(userData.facebookLink)")! as URL)
+                let facebookHooks = "fb://profile/\(userData.facebookLink)"
+                let facebookUrl = NSURL(string: facebookHooks)
+                if UIApplication.shared.canOpenURL(facebookUrl! as URL)
+                {
+                    UIApplication.shared.open(facebookUrl! as URL)
+                    
+                } else {
+                    //redirect to safari because the user doesn't have Instagram
+                    UIApplication.shared.open(NSURL(string: "http://facebook.com/\(userData.facebookLink)")! as URL)
                 }
             }else{
                 alertDialogPopup(alertTitle: "Sorry!", alertMessage: "This user hasn't provided the Facebook link", buttonTitle: "Ok")
@@ -228,7 +233,7 @@ class UserProfileVC: UIViewController , UIPopoverPresentationControllerDelegate,
             }else{
                 alertDialogPopup(alertTitle: "Sorry!", alertMessage: "This user hasn't provided the Instagram link", buttonTitle: "Ok")
             }
-
+            
             break
         case 3:
             if userData.snapChatLink != ""{

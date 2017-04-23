@@ -25,8 +25,7 @@ class HomePageVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.delegate = self
         tableView.dataSource = self
         elissaTrigger()
-        //loadData
-        loadData()
+       
         
         //dismiss the Elissa popUp
         let gesture = UITapGestureRecognizer(target: self, action:  #selector (self.touchBegin (_:)))
@@ -60,6 +59,8 @@ class HomePageVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
 //        //remove "back" from the cursor side in the navigation bar
 //        self.navigationController?.navigationBar.backItem?.title=""
+        //loadData
+        loadData()
     }
     
     
@@ -136,9 +137,7 @@ class HomePageVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
     }
     
-   // @IBAction func goToEventDetails(_ sender: Any) {
- //       performSegue(withIdentifier: "goToEventDetail", sender: nil)
-    //}
+
   
     func touchBegin(_ sender:UITapGestureRecognizer){
         Elissa.dismiss()

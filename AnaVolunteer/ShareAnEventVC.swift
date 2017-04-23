@@ -169,7 +169,8 @@ class ShareAnEventVC: UIViewController , UIImagePickerControllerDelegate, UINavi
         self.present(alert, animated: true, completion: nil)
     }
     
-    @IBAction func volunteerNeeded(_ sender: Any) {
+    
+    @IBAction func volunteerNeededFlag(_ sender: Any) {
         switch eventVolunteersIfNeeded.selectedSegmentIndex
         {
         case 0:
@@ -180,8 +181,7 @@ class ShareAnEventVC: UIViewController , UIImagePickerControllerDelegate, UINavi
             break;
         }
     }
-    
-    @IBAction func shareProfileSeg(_ sender: Any) {
+    @IBAction func shareProfileFlag(_ sender: Any) {
         switch sharingHostedProfile.selectedSegmentIndex
         {
         case 0:
