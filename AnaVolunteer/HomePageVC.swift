@@ -123,8 +123,7 @@ class HomePageVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 //        }
 //    }
 
-    func elissaTrigger() {
-        
+    func elissaTrigger(){
         let elissaConfig = ElissaConfiguration()
         elissaConfig.message = "Share An Event"
         elissaConfig.image = UIImage(named: "event")

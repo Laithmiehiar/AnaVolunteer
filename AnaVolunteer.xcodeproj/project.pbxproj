@@ -51,6 +51,7 @@
 		AC8C9E551E6535300040838C /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8C9E541E6535300040838C /* DataService.swift */; };
 		AC8C9E571E666D950040838C /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8C9E561E666D930040838C /* Post.swift */; };
 		AC9F633D1E95F6F80087D34D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9F633C1E95F6F80087D34D /* User.swift */; };
+		ACCDD73E1EAD4FBB00741C94 /* WebViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCDD73D1EAD4FBB00741C94 /* WebViewVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,6 +104,7 @@
 		AC8C9E541E6535300040838C /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		AC8C9E561E666D930040838C /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		AC9F633C1E95F6F80087D34D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		ACCDD73D1EAD4FBB00741C94 /* WebViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +216,7 @@
 				AC7268311E694D4E00C6A8EA /* ShareAnEventVC.swift */,
 				AC7268351E6BEDAF00C6A8EA /* EventDetailsVC.swift */,
 				AC0D0FDC1E8E1888006121CD /* UserProfileVC.swift */,
+				ACCDD73D1EAD4FBB00741C94 /* WebViewVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -427,6 +430,7 @@
 				AC16AECC1E64016D00693E1C /* CircleImageView.swift in Sources */,
 				AC7268361E6BEDAF00C6A8EA /* EventDetailsVC.swift in Sources */,
 				AC8C9E571E666D950040838C /* Post.swift in Sources */,
+				ACCDD73E1EAD4FBB00741C94 /* WebViewVC.swift in Sources */,
 				AC266AC81E6152F60009B6E3 /* Constant.swift in Sources */,
 				AC8C9E551E6535300040838C /* DataService.swift in Sources */,
 				AC9F633D1E95F6F80087D34D /* User.swift in Sources */,

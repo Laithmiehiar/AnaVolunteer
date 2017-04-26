@@ -205,7 +205,7 @@ class UserProfileVC: UIViewController , UIPopoverPresentationControllerDelegate,
                     UIApplication.shared.open(facebookUrl! as URL)
                     
                 } else {
-                    //redirect to safari because the user doesn't have Instagram
+                    //redirect to safari because the user doesn't have facebook
                     UIApplication.shared.open(NSURL(string: "http://facebook.com/\(userData.facebookLink)")! as URL)
                 }
             }else{

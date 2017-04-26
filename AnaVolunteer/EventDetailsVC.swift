@@ -12,28 +12,27 @@ import Firebase
 class EventDetailsVC: UIViewController {
     
     @IBOutlet weak var eventPhoto: UIImageView!
-    
     @IBOutlet weak var eventTitile: UILabel!
     @IBOutlet weak var eventDesc: UILabel!
-    
     @IBOutlet weak var eventTimestamp: UILabel!
-    
     @IBOutlet weak var eventLocation: UILabel!
-    
     @IBOutlet weak var eventFees: UILabel!
-    
     @IBOutlet weak var eventCategory: RoundButton!
-    
     @IBOutlet weak var eventTargetAudience: UILabel!
-    
     @IBOutlet weak var volunteerNeededFlag: UILabel!
     var postData = Post()
     var img: UIImage? = nil
     
     @IBOutlet weak var scrollView: UIScrollView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
             loadImage()
+        
+//        scrollView.isUserInteractionEnabled = true
+//        scrollView.isExclusiveTouch = true
+//        scrollView.canCancelContentTouches = true
+//        scrollView.delaysContentTouches = true
         
         eventTitile.text = postData.eventCaption
         eventDesc.text = postData.eventDescription
@@ -57,7 +56,7 @@ class EventDetailsVC: UIViewController {
     }
     override func viewDidLayoutSubviews(){
         super.viewDidLayoutSubviews()
-        scrollView.contentSize = CGSize(width: 320, height: 1280);
+//        scrollView.contentSize = CGSize(width: 320, height: 1280);
         
         
     }
@@ -65,16 +64,37 @@ class EventDetailsVC: UIViewController {
         // Show the navigation bar on other view controllers
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
         //remove "back" from the cursor side in the navigation bar
-        //        self.navigationController?.navigationBar.backItem?.title="Back"
+        //self.navigationController?.navigationBar.backItem?.title="Back"
     }
     
     @IBAction func audienceRegLink(_ sender: Any) {
+        print("audienceRegLink")
     }
     
     @IBAction func volunteerRegLink(_ sender: Any) {
     }
     
     @IBAction func facebookLink(_ sender: Any) {
+        if (postData.eventFacebookPage != ""){
+            let facebookHooks = "fb://profile/\(postData.eventFacebookPage)"
+            let facebookUrl = NSURL(string: facebookHooks)
+            if UIApplication.shared.canOpenURL(facebookUrl! as URL)
+            {
+                UIApplication.shared.open(facebookUrl! as URL)
+            } else {
+                let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+                let destination = storyboard.instantiateViewController(withIdentifier: "webViewVC") as! WebViewVC
+                destination.urlString = postData.eventFacebookPage
+                navigationController?.pushViewController(destination, animated: true)
+                //redirect to safari because the user doesn't have facebook
+                //UIApplication.shared.open(NSURL(string: "http://facebook.com/\(postData.eventFacebookPage)")! as URL)
+            }
+
+        }else{
+            //fb not provided
+            print("fb not provided")
+            
+        }
     }
     
     @IBAction func twitterLink(_ sender: Any) {
@@ -88,6 +108,8 @@ class EventDetailsVC: UIViewController {
     
     @IBAction func hostProfile(_ sender: Any) {
     }
+    
+    
     
     func loadImage(){
         if img != nil{
