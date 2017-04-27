@@ -112,7 +112,7 @@ class SignupVC: UIViewController , UIImagePickerControllerDelegate, UINavigation
           //create new account
           FIRAuth.auth()?.createUser(withEmail: email.text!, password: password.text!, completion: { (user,error) in
                if error != nil{
-                    print("SignupVC: Unable to authenticated with Firebase using email \(error)")
+                    print("SignupVC: Unable to authenticated with Firebase using email \(String(describing: error))")
                     self.alertDialogPopup(alertTitle: "HEY!", alertMessage: "The email address is already in use by another account!", buttonTitle: "Ok")
                     
                }else{

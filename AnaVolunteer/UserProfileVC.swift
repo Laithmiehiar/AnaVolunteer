@@ -18,7 +18,7 @@ class UserProfileVC: UIViewController , UIPopoverPresentationControllerDelegate,
     @IBOutlet weak var aboutTextView: UILabel!
     @IBOutlet weak var userProfileImage: UIImageView!
     @IBOutlet weak var socialLink: UIImageView!
-    
+    var postedById: String?
     
     
     let picker = UIImageView(image: UIImage(named: "pickerbkg2"))
@@ -47,11 +47,15 @@ class UserProfileVC: UIViewController , UIPopoverPresentationControllerDelegate,
         let gesture = UITapGestureRecognizer(target: self, action:  #selector (self.touchBegin (_:)))
         self.view.addGestureRecognizer(gesture)
         
-        if let userId = KeychainWrapper.standard.string(forKey: KEY_ID){
-            print("UserProfileVC: ID found in keychain  \(userId)")
-            loadUserData(userId: userId)
+        if (postedById != "" && postedById != nil){
+            print("UserProfileVC: ID pressed by user  \(String(describing: postedById))")
+            loadUserData(userId: postedById!)
+        }else{
+            if let userId = KeychainWrapper.standard.string(forKey: KEY_ID){
+                print("UserProfileVC: ID found in keychain  \(userId)")
+                loadUserData(userId: userId)
+            }
         }
-        
         
         
     }
@@ -126,7 +130,7 @@ class UserProfileVC: UIViewController , UIPopoverPresentationControllerDelegate,
                                     let ref = FIRStorage.storage().reference(forURL: self.userData.profileImage)
                                     ref.data(withMaxSize: 15 * 1024 * 1024, completion: {(data,error) in
                                         if error != nil {
-                                            print("UserProfileVC: Unable to download image from Firebase Storage \(error)")
+                                            print("UserProfileVC: Unable to download image from Firebase Storage \(String(describing: error))")
                                         }else{
                                             print("UserProfileVC: Image downloaded from Firebase Storage")
                                             if let imgData = data{

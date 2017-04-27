@@ -125,7 +125,7 @@ class ShareAnEventVC: UIViewController , UIImagePickerControllerDelegate, UINavi
     }
     
     func postToFirebase(imageURL: String, eventTime: String, eventDate: String){
-        var post: Dictionary<String,Any>= [:];
+        var post: Dictionary<String,Any> = [:];
         do {
             post.updateValue(imageURL, forKey: "eventImage")
             post.updateValue(eventName.text!, forKey: "eventCaption")
@@ -146,6 +146,7 @@ class ShareAnEventVC: UIViewController , UIImagePickerControllerDelegate, UINavi
             post.updateValue( 0, forKey: "likes")
             post.updateValue( eventSnapchatId.text ?? "Not Provided", forKey: "eventSnapchatUserName")
             post.updateValue(KeychainWrapper.standard.string(forKey: KEY_ID) ?? 0, forKey: "postedBy")
+            post.updateValue(shareProfile, forKey: "postedByFlag")
 
             
         }

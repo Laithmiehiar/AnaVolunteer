@@ -30,6 +30,7 @@ class Post{
     private var _likesfromFavButton: Int!
     private var _postKey: String!
     private var _postedBy: String!
+    private var _postedByFlag: Bool!
     private var _postRef: FIRDatabaseReference!
     
     
@@ -38,7 +39,7 @@ class Post{
     }
     
     init(eventCaption: String, eventAddress: String,eventAudience: String, eventAudienceRegistrationLink: String,
-         eventCategory: String,eventDescription: String,eventFacebookPage: String,eventFees: String, eventInstagramPage: String, eventSnapchatUserName: String, eventTime: String, eventTwitterPage: String, eventVolunteersIsNeeded: Bool,eventVolunteersRegistrationLink: String, sharingHostedProfile: String,  eventDate: String,eventImage: String,postedBy: String,location: String,likesfromFavButton:Int) {
+         eventCategory: String,eventDescription: String,eventFacebookPage: String,eventFees: String, eventInstagramPage: String, eventSnapchatUserName: String, eventTime: String, eventTwitterPage: String, eventVolunteersIsNeeded: Bool,eventVolunteersRegistrationLink: String, sharingHostedProfile: String,  eventDate: String,eventImage: String,postedBy: String,location: String,likesfromFavButton:Int,postedByFlag: Bool) {
         self._eventCaption = eventCaption
         self._eventAddress = eventAddress
         self._eventAudience = eventAudience
@@ -58,6 +59,7 @@ class Post{
         self._likesfromFavButton = likesfromFavButton
         self._postedBy = postedBy
         self._eventImage = eventImage
+        self._postedByFlag = postedByFlag
     }
     
     init(postKey: String, postData: Dictionary<String,AnyObject>) {
@@ -119,6 +121,9 @@ class Post{
         }
         if let likesfromFavButton = postData["likes"] as? Int{
             self._likesfromFavButton = likesfromFavButton
+        }
+        if let postedByFlag = postData["postedByFlag"] as? Bool{
+            self._postedByFlag = postedByFlag
         }
         
         
@@ -194,6 +199,10 @@ class Post{
     }
     var likesfromFavButton: Int{
         return _likesfromFavButton
+    }
+    
+    var postedByFlag: Bool {
+        return _postedByFlag
     }
     var postKey: String{
         return _postKey

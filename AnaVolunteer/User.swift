@@ -135,7 +135,7 @@ class User{
     
     var phoneNumber: String{
         get{
-            return _phoneNumber
+            return _phoneNumber ?? ""
         }
         set{
             _phoneNumber = newValue

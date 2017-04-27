@@ -8,8 +8,8 @@
 
 import UIKit
 import Firebase
-import Elissa
 import SwiftKeychainWrapper
+import Elissa
 class HomePageVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var logoutBtn: UIButton!
@@ -61,6 +61,7 @@ class HomePageVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 //        self.navigationController?.navigationBar.backItem?.title=""
         //loadData
         loadData()
+        self.tableView.reloadData()
     }
     
     

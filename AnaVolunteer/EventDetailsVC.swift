@@ -20,19 +20,29 @@ class EventDetailsVC: UIViewController {
     @IBOutlet weak var eventCategory: RoundButton!
     @IBOutlet weak var eventTargetAudience: UILabel!
     @IBOutlet weak var volunteerNeededFlag: UILabel!
+    @IBOutlet weak var hostedByBtn: UIButton!
+    
+    var userPost: FIRDatabaseReference!
     var postData = Post()
     var img: UIImage? = nil
     
     @IBOutlet weak var scrollView: UIScrollView!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-            loadImage()
         
-//        scrollView.isUserInteractionEnabled = true
-//        scrollView.isExclusiveTouch = true
-//        scrollView.canCancelContentTouches = true
-//        scrollView.delaysContentTouches = true
+        loadImage()
+        userPost = DataService.ds.REF_USERS.child(postData.postedBy)
+        
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    override func viewDidLayoutSubviews(){
+        super.viewDidLayoutSubviews()
+        
         
         eventTitile.text = postData.eventCaption
         eventDesc.text = postData.eventDescription
@@ -46,18 +56,14 @@ class EventDetailsVC: UIViewController {
         }else{
             volunteerNeededFlag.text = "false"
         }
+        userPost.observeSingleEvent(of: .value, with:{ (snapshot: FIRDataSnapshot) in
+            let value = snapshot.value as? NSDictionary
+            let firstName = value?.value(forKey: "firstName")
+            let lastName = value?.value(forKey: "lastName")
+            self.hostedByBtn.setTitle("\(firstName!) \(lastName!)", for: .normal)
+            
+        })
         print(postData)
-        
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    override func viewDidLayoutSubviews(){
-        super.viewDidLayoutSubviews()
-//        scrollView.contentSize = CGSize(width: 320, height: 1280);
-        
         
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -68,45 +74,95 @@ class EventDetailsVC: UIViewController {
     }
     
     @IBAction func audienceRegLink(_ sender: Any) {
-        print("audienceRegLink")
+        if postData.eventAudienceRegistrationLink != "" {
+            
+            openLinkOnWebView(link: "\(postData.eventAudienceRegistrationLink)")
+            
+        }else{
+            //link not provided
+        }
     }
     
     @IBAction func volunteerRegLink(_ sender: Any) {
+        if postData.eventVolunteersRegistrationLink != "" {
+            
+            openLinkOnWebView(link: "\(postData.eventVolunteersRegistrationLink)")
+            
+        }else{
+            //link not provided
+        }
     }
     
     @IBAction func facebookLink(_ sender: Any) {
         if (postData.eventFacebookPage != ""){
-            let facebookHooks = "fb://profile/\(postData.eventFacebookPage)"
+            //            let facebookHooks = "fb://groups/\(postData.eventFacebookPage)"
+            let facebookHooks = "\(postData.eventFacebookPage)"
+            
             let facebookUrl = NSURL(string: facebookHooks)
             if UIApplication.shared.canOpenURL(facebookUrl! as URL)
             {
                 UIApplication.shared.open(facebookUrl! as URL)
             } else {
-                let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-                let destination = storyboard.instantiateViewController(withIdentifier: "webViewVC") as! WebViewVC
-                destination.urlString = postData.eventFacebookPage
-                navigationController?.pushViewController(destination, animated: true)
-                //redirect to safari because the user doesn't have facebook
-                //UIApplication.shared.open(NSURL(string: "http://facebook.com/\(postData.eventFacebookPage)")! as URL)
+                openLinkOnWebView(link: "www.facebook.com/\(postData.eventFacebookPage)")
             }
-
+            
         }else{
             //fb not provided
             print("fb not provided")
-            
         }
     }
     
     @IBAction func twitterLink(_ sender: Any) {
+        if (postData.eventTwitterPage != ""){
+            let twitterHooks = "twitter://profile/\(postData.eventInstagramPage)"
+            let twitterUrl = NSURL(string: twitterHooks)
+            if UIApplication.shared.canOpenURL(twitterUrl! as URL)
+            {
+                UIApplication.shared.open(twitterUrl! as URL)
+            } else {
+                openLinkOnWebView(link: "www.twitter.com/\(postData.eventTwitterPage)")
+            }
+            
+        }else{
+            //twitter not provided
+            print("twitter not provided")
+            
+        }
+        
     }
     
     @IBAction func instagramLink(_ sender: Any) {
+        if (postData.eventInstagramPage != ""){
+            let instagramHooks = "instagram://user?username=\(postData.eventInstagramPage)"
+            let instagramUrl = NSURL(string: instagramHooks)
+            if UIApplication.shared.canOpenURL(instagramUrl! as URL)
+            {
+                UIApplication.shared.open(instagramUrl! as URL)
+            } else {
+                openLinkOnWebView(link: "www.instagram.com/\(postData.eventInstagramPage)")
+            }
+            
+        }else{
+            //insta not provided
+            print("instagram not provided")
+            
+        }
+        
     }
     
     @IBAction func snapchatLink(_ sender: Any) {
+        alertDialogPopup(alertTitle: "SnapChat ID", alertMessage: "Snapchat username: \(postData.eventSnapchatUserName)", buttonTitle: "Got it")
     }
     
     @IBAction func hostProfile(_ sender: Any) {
+        if (postData.postedByFlag){
+            let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+            let destination = storyboard.instantiateViewController(withIdentifier: "UserProfileVC") as! UserProfileVC
+            destination.postedById = "\(postData.postedBy)"
+            navigationController?.pushViewController(destination, animated: true)
+        }else{
+           alertDialogPopup(alertTitle: "Sorry!", alertMessage: "User Information unavilable", buttonTitle: "ok")
+        }
     }
     
     
@@ -115,21 +171,37 @@ class EventDetailsVC: UIViewController {
         if img != nil{
             self.eventPhoto.image = img
         }else{
-                let ref = FIRStorage.storage().reference(forURL: self.postData.eventImage)
-                ref.data(withMaxSize: 15 * 1024 * 1024, completion: {(data,error) in
-                    if error != nil {
-                        print("EventDetailsVC: Unable to download image from Firebase Storage \(error)")
-                    }else{
-                        print("EventDetailsVC: Image downloaded from Firebase Storage")
-                        if let imgData = data{
-                            if let img = UIImage(data: imgData){
-                                self.eventPhoto.image = img
-                            }
+            let ref = FIRStorage.storage().reference(forURL: self.postData.eventImage)
+            ref.data(withMaxSize: 15 * 1024 * 1024, completion: {(data,error) in
+                if error != nil {
+                    print("EventDetailsVC: Unable to download image from Firebase Storage \(String(describing: error))")
+                }else{
+                    print("EventDetailsVC: Image downloaded from Firebase Storage")
+                    if let imgData = data{
+                        if let img = UIImage(data: imgData){
+                            self.eventPhoto.image = img
                         }
                     }
-                })
+                }
+            })
             
         }
+    }
+    
+    
+    
+    func alertDialogPopup(alertTitle: String, alertMessage: String, buttonTitle: String){
+        let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: buttonTitle, style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    
+    func openLinkOnWebView(link: String!){
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let destination = storyboard.instantiateViewController(withIdentifier: "webViewVC") as! WebViewVC
+        destination.urlString = link
+        navigationController?.pushViewController(destination, animated: true)
     }
     /*
      // MARK: - Navigation
